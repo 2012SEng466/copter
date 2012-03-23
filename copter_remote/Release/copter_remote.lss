@@ -1,0 +1,3696 @@
+
+copter_remote.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         000000ac  00800100  000013da  0000146e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000013da  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          000000e0  008001ac  008001ac  0000151a  2**0
+                  ALLOC
+  3 .debug_aranges 000007d0  00000000  00000000  0000151a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 000011c1  00000000  00000000  00001cea  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00007c5d  00000000  00000000  00002eab  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00001ea4  00000000  00000000  0000ab08  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00004bdf  00000000  00000000  0000c9ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000da0  00000000  00000000  0001158c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000229e  00000000  00000000  0001232c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000046cd  00000000  00000000  000145ca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000740  00000000  00000000  00018c97  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+	cePin = 8;
+	csnPin = 7;
+	channel = 1;
+	payload = 16;
+	spi = NULL;
+}
+       0:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__ctors_end>
+void SPIClass::setBitOrder(uint8_t bitOrder)
+{
+  if(bitOrder == LSBFIRST) {
+    SPCR |= _BV(DORD);
+  } else {
+    SPCR &= ~(_BV(DORD));
+       4:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+}
+
+uint8_t Servo::attach(int pin)
+{
+  return this->attach(pin, MIN_PULSE_WIDTH, MAX_PULSE_WIDTH);
+}
+       8:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+ * Sends a radio_packet to receiver at address addr and returns.
+ */
+void radio_send_nowait(radio_packet * packet, char * addr) {
+	Mirf.setTADDR((byte *)addr);
+	Mirf.send(packet->data);
+}
+       c:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+
+HardwareSerial::HardwareSerial(ring_buffer *rx_buffer, ring_buffer *tx_buffer,
+  volatile uint8_t *ubrrh, volatile uint8_t *ubrrl,
+  volatile uint8_t *ucsra, volatile uint8_t *ucsrb,
+  volatile uint8_t *udr,
+  uint8_t rxen, uint8_t txen, uint8_t rxcie, uint8_t udrie, uint8_t u2x)
+      10:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+    n += write(*buffer++);
+  }
+  return n;
+}
+
+size_t Print::print(const __FlashStringHelper *ifsh)
+      14:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+	timer0_millis = m;
+	timer0_overflow_count++;
+}
+
+unsigned long millis()
+{
+      18:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+
+	SREG = oldSREG;
+}
+
+int digitalRead(uint8_t pin)
+{
+      1c:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      20:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      24:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      28:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      2c:	0c 94 09 03 	jmp	0x612	; 0x612 <__vector_11>
+      30:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      34:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      38:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      3c:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      40:	0c 94 27 08 	jmp	0x104e	; 0x104e <__vector_16>
+      44:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      48:	0c 94 d3 04 	jmp	0x9a6	; 0x9a6 <__vector_18>
+      4c:	0c 94 1a 05 	jmp	0xa34	; 0xa34 <__vector_19>
+      50:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      54:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      58:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      5c:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      60:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+      64:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+
+00000068 <port_to_mode_PGM>:
+      68:	00 00 00 00 24 00 27 00 2a 00                       ....$.'.*.
+
+00000072 <port_to_output_PGM>:
+      72:	00 00 00 00 25 00 28 00 2b 00                       ....%.(.+.
+
+0000007c <port_to_input_PGM>:
+      7c:	00 00 00 00 23 00 26 00 29 00                       ....#.&.).
+
+00000086 <digital_pin_to_port_PGM>:
+      86:	04 04 04 04 04 04 04 04 02 02 02 02 02 02 03 03     ................
+      96:	03 03 03 03                                         ....
+
+0000009a <digital_pin_to_bit_mask_PGM>:
+      9a:	01 02 04 08 10 20 40 80 01 02 04 08 10 20 01 02     ..... @...... ..
+      aa:	04 08 10 20                                         ... 
+
+000000ae <digital_pin_to_timer_PGM>:
+      ae:	00 00 00 07 00 02 01 00 00 03 04 06 00 00 00 00     ................
+      be:	00 00 00 00                                         ....
+
+000000c2 <__ctors_start>:
+      c2:	df 00       	.word	0x00df	; ????
+      c4:	c4 02       	muls	r28, r20
+      c6:	91 06       	cpc	r9, r17
+
+000000c8 <__ctors_end>:
+      c8:	11 24       	eor	r1, r1
+      ca:	1f be       	out	0x3f, r1	; 63
+      cc:	cf ef       	ldi	r28, 0xFF	; 255
+      ce:	d8 e0       	ldi	r29, 0x08	; 8
+      d0:	de bf       	out	0x3e, r29	; 62
+      d2:	cd bf       	out	0x3d, r28	; 61
+
+000000d4 <__do_copy_data>:
+      d4:	11 e0       	ldi	r17, 0x01	; 1
+      d6:	a0 e0       	ldi	r26, 0x00	; 0
+      d8:	b1 e0       	ldi	r27, 0x01	; 1
+      da:	ea ed       	ldi	r30, 0xDA	; 218
+      dc:	f3 e1       	ldi	r31, 0x13	; 19
+      de:	02 c0       	rjmp	.+4      	; 0xe4 <.do_copy_data_start>
+
+000000e0 <.do_copy_data_loop>:
+      e0:	05 90       	lpm	r0, Z+
+      e2:	0d 92       	st	X+, r0
+
+000000e4 <.do_copy_data_start>:
+      e4:	ac 3a       	cpi	r26, 0xAC	; 172
+      e6:	b1 07       	cpc	r27, r17
+      e8:	d9 f7       	brne	.-10     	; 0xe0 <.do_copy_data_loop>
+
+000000ea <__do_clear_bss>:
+      ea:	12 e0       	ldi	r17, 0x02	; 2
+      ec:	ac ea       	ldi	r26, 0xAC	; 172
+      ee:	b1 e0       	ldi	r27, 0x01	; 1
+      f0:	01 c0       	rjmp	.+2      	; 0xf4 <.do_clear_bss_start>
+
+000000f2 <.do_clear_bss_loop>:
+      f2:	1d 92       	st	X+, r1
+
+000000f4 <.do_clear_bss_start>:
+      f4:	ac 38       	cpi	r26, 0x8C	; 140
+      f6:	b1 07       	cpc	r27, r17
+      f8:	e1 f7       	brne	.-8      	; 0xf2 <.do_clear_bss_loop>
+
+000000fa <__do_global_ctors>:
+      fa:	10 e0       	ldi	r17, 0x00	; 0
+      fc:	c8 ec       	ldi	r28, 0xC8	; 200
+      fe:	d0 e0       	ldi	r29, 0x00	; 0
+     100:	04 c0       	rjmp	.+8      	; 0x10a <.do_global_ctors_start>
+
+00000102 <.do_global_ctors_loop>:
+     102:	22 97       	sbiw	r28, 0x02	; 2
+     104:	fe 01       	movw	r30, r28
+     106:	0e 94 e7 09 	call	0x13ce	; 0x13ce <__tablejump__>
+
+0000010a <.do_global_ctors_start>:
+     10a:	c2 3c       	cpi	r28, 0xC2	; 194
+     10c:	d1 07       	cpc	r29, r17
+     10e:	c9 f7       	brne	.-14     	; 0x102 <.do_global_ctors_loop>
+     110:	0e 94 18 08 	call	0x1030	; 0x1030 <main>
+     114:	0c 94 eb 09 	jmp	0x13d6	; 0x13d6 <_exit>
+
+00000118 <__bad_interrupt>:
+     118:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000011c <_ZN6Nrf24l12transferSyncEPhS0_h>:
+
+void Nrf24l::transferSync(uint8_t *dataout,uint8_t *datain,uint8_t len){
+     11c:	bf 92       	push	r11
+     11e:	cf 92       	push	r12
+     120:	df 92       	push	r13
+     122:	ef 92       	push	r14
+     124:	ff 92       	push	r15
+     126:	0f 93       	push	r16
+     128:	1f 93       	push	r17
+     12a:	cf 93       	push	r28
+     12c:	df 93       	push	r29
+     12e:	6c 01       	movw	r12, r24
+     130:	7a 01       	movw	r14, r20
+     132:	b2 2e       	mov	r11, r18
+     134:	8b 01       	movw	r16, r22
+     136:	c0 e0       	ldi	r28, 0x00	; 0
+     138:	d0 e0       	ldi	r29, 0x00	; 0
+     13a:	13 c0       	rjmp	.+38     	; 0x162 <_ZN6Nrf24l12transferSyncEPhS0_h+0x46>
+	uint8_t i;
+	for(i = 0;i < len;i++){
+		datain[i] = spi->transfer(dataout[i]);
+     13c:	f6 01       	movw	r30, r12
+     13e:	a6 81       	ldd	r26, Z+6	; 0x06
+     140:	b7 81       	ldd	r27, Z+7	; 0x07
+     142:	ed 91       	ld	r30, X+
+     144:	fc 91       	ld	r31, X
+     146:	11 97       	sbiw	r26, 0x01	; 1
+     148:	01 90       	ld	r0, Z+
+     14a:	f0 81       	ld	r31, Z
+     14c:	e0 2d       	mov	r30, r0
+     14e:	cd 01       	movw	r24, r26
+     150:	d8 01       	movw	r26, r16
+     152:	6d 91       	ld	r22, X+
+     154:	8d 01       	movw	r16, r26
+     156:	09 95       	icall
+     158:	f7 01       	movw	r30, r14
+     15a:	ec 0f       	add	r30, r28
+     15c:	fd 1f       	adc	r31, r29
+     15e:	80 83       	st	Z, r24
+     160:	21 96       	adiw	r28, 0x01	; 1
+	spi = NULL;
+}
+
+void Nrf24l::transferSync(uint8_t *dataout,uint8_t *datain,uint8_t len){
+	uint8_t i;
+	for(i = 0;i < len;i++){
+     162:	cb 15       	cp	r28, r11
+     164:	58 f3       	brcs	.-42     	; 0x13c <_ZN6Nrf24l12transferSyncEPhS0_h+0x20>
+		datain[i] = spi->transfer(dataout[i]);
+	}
+}
+     166:	df 91       	pop	r29
+     168:	cf 91       	pop	r28
+     16a:	1f 91       	pop	r17
+     16c:	0f 91       	pop	r16
+     16e:	ff 90       	pop	r15
+     170:	ef 90       	pop	r14
+     172:	df 90       	pop	r13
+     174:	cf 90       	pop	r12
+     176:	bf 90       	pop	r11
+     178:	08 95       	ret
+
+0000017a <_ZN6Nrf24l12transmitSyncEPhh>:
+
+void Nrf24l::transmitSync(uint8_t *dataout,uint8_t len){
+     17a:	ef 92       	push	r14
+     17c:	ff 92       	push	r15
+     17e:	0f 93       	push	r16
+     180:	1f 93       	push	r17
+     182:	cf 93       	push	r28
+     184:	df 93       	push	r29
+     186:	7c 01       	movw	r14, r24
+     188:	04 2f       	mov	r16, r20
+     18a:	eb 01       	movw	r28, r22
+     18c:	10 e0       	ldi	r17, 0x00	; 0
+     18e:	0e c0       	rjmp	.+28     	; 0x1ac <_ZN6Nrf24l12transmitSyncEPhh+0x32>
+	uint8_t i;
+	for(i = 0;i < len;i++){
+		spi->transfer(dataout[i]);
+     190:	d7 01       	movw	r26, r14
+     192:	16 96       	adiw	r26, 0x06	; 6
+     194:	ed 91       	ld	r30, X+
+     196:	fc 91       	ld	r31, X
+     198:	17 97       	sbiw	r26, 0x07	; 7
+     19a:	a0 81       	ld	r26, Z
+     19c:	b1 81       	ldd	r27, Z+1	; 0x01
+     19e:	2d 91       	ld	r18, X+
+     1a0:	3c 91       	ld	r19, X
+     1a2:	cf 01       	movw	r24, r30
+     1a4:	69 91       	ld	r22, Y+
+     1a6:	f9 01       	movw	r30, r18
+     1a8:	09 95       	icall
+	}
+}
+
+void Nrf24l::transmitSync(uint8_t *dataout,uint8_t len){
+	uint8_t i;
+	for(i = 0;i < len;i++){
+     1aa:	1f 5f       	subi	r17, 0xFF	; 255
+     1ac:	10 17       	cp	r17, r16
+     1ae:	80 f3       	brcs	.-32     	; 0x190 <_ZN6Nrf24l12transmitSyncEPhh+0x16>
+		spi->transfer(dataout[i]);
+	}
+}
+     1b0:	df 91       	pop	r29
+     1b2:	cf 91       	pop	r28
+     1b4:	1f 91       	pop	r17
+     1b6:	0f 91       	pop	r16
+     1b8:	ff 90       	pop	r15
+     1ba:	ef 90       	pop	r14
+     1bc:	08 95       	ret
+
+000001be <_GLOBAL__I_Mirf>:
+// Defines for setting the MiRF registers for transmitting or receiving mode
+
+Nrf24l Mirf = Nrf24l();
+
+Nrf24l::Nrf24l(){
+	pwrPin = 5;
+     1be:	85 e0       	ldi	r24, 0x05	; 5
+     1c0:	80 93 af 01 	sts	0x01AF, r24
+	cePin = 8;
+     1c4:	88 e0       	ldi	r24, 0x08	; 8
+     1c6:	80 93 ad 01 	sts	0x01AD, r24
+	csnPin = 7;
+     1ca:	87 e0       	ldi	r24, 0x07	; 7
+     1cc:	80 93 ae 01 	sts	0x01AE, r24
+	channel = 1;
+     1d0:	81 e0       	ldi	r24, 0x01	; 1
+     1d2:	80 93 b0 01 	sts	0x01B0, r24
+	payload = 16;
+     1d6:	80 e1       	ldi	r24, 0x10	; 16
+     1d8:	80 93 b1 01 	sts	0x01B1, r24
+	spi = NULL;
+     1dc:	10 92 b3 01 	sts	0x01B3, r1
+     1e0:	10 92 b2 01 	sts	0x01B2, r1
+}
+
+void Nrf24l::powerDown(){
+	ceLow();
+	configRegister(CONFIG, mirf_CONFIG );
+}
+     1e4:	08 95       	ret
+
+000001e6 <_ZN6Nrf24l6csnLowEv>:
+void Nrf24l::csnHi(){
+	digitalWrite(csnPin,HIGH);
+}
+
+void Nrf24l::csnLow(){
+	digitalWrite(csnPin,LOW);
+     1e6:	fc 01       	movw	r30, r24
+     1e8:	82 81       	ldd	r24, Z+2	; 0x02
+     1ea:	60 e0       	ldi	r22, 0x00	; 0
+     1ec:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+}
+     1f0:	08 95       	ret
+
+000001f2 <_ZN6Nrf24l5csnHiEv>:
+void Nrf24l::ceLow(){
+	digitalWrite(cePin,LOW);
+}
+
+void Nrf24l::csnHi(){
+	digitalWrite(csnPin,HIGH);
+     1f2:	fc 01       	movw	r30, r24
+     1f4:	82 81       	ldd	r24, Z+2	; 0x02
+     1f6:	61 e0       	ldi	r22, 0x01	; 1
+     1f8:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+}
+     1fc:	08 95       	ret
+
+000001fe <_ZN6Nrf24l7flushRxEv>:
+	configRegister(CONFIG, mirf_CONFIG | ( (1<<PWR_UP) | (1<<PRIM_RX) ) );
+	ceHi();
+	configRegister(STATUS,(1 << TX_DS) | (1 << MAX_RT)); 
+}
+
+void Nrf24l::flushRx(){
+     1fe:	0f 93       	push	r16
+     200:	1f 93       	push	r17
+     202:	8c 01       	movw	r16, r24
+    csnLow();
+     204:	0e 94 f3 00 	call	0x1e6	; 0x1e6 <_ZN6Nrf24l6csnLowEv>
+    spi->transfer( FLUSH_RX );
+     208:	f8 01       	movw	r30, r16
+     20a:	a6 81       	ldd	r26, Z+6	; 0x06
+     20c:	b7 81       	ldd	r27, Z+7	; 0x07
+     20e:	ed 91       	ld	r30, X+
+     210:	fc 91       	ld	r31, X
+     212:	11 97       	sbiw	r26, 0x01	; 1
+     214:	01 90       	ld	r0, Z+
+     216:	f0 81       	ld	r31, Z
+     218:	e0 2d       	mov	r30, r0
+     21a:	cd 01       	movw	r24, r26
+     21c:	62 ee       	ldi	r22, 0xE2	; 226
+     21e:	09 95       	icall
+    csnHi();
+     220:	c8 01       	movw	r24, r16
+     222:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <_ZN6Nrf24l5csnHiEv>
+}
+     226:	1f 91       	pop	r17
+     228:	0f 91       	pop	r16
+     22a:	08 95       	ret
+
+0000022c <_ZN6Nrf24l13writeRegisterEhPhh>:
+    spi->transfer(R_REGISTER | (REGISTER_MASK & reg));
+    transferSync(value,value,len);
+    csnHi();
+}
+
+void Nrf24l::writeRegister(uint8_t reg, uint8_t * value, uint8_t len) 
+     22c:	cf 92       	push	r12
+     22e:	df 92       	push	r13
+     230:	ef 92       	push	r14
+     232:	ff 92       	push	r15
+     234:	0f 93       	push	r16
+     236:	1f 93       	push	r17
+     238:	8c 01       	movw	r16, r24
+     23a:	f6 2e       	mov	r15, r22
+     23c:	6a 01       	movw	r12, r20
+     23e:	e2 2e       	mov	r14, r18
+// Writes an array of bytes into inte the MiRF registers.
+{
+    csnLow();
+     240:	0e 94 f3 00 	call	0x1e6	; 0x1e6 <_ZN6Nrf24l6csnLowEv>
+    spi->transfer(W_REGISTER | (REGISTER_MASK & reg));
+     244:	f8 01       	movw	r30, r16
+     246:	a6 81       	ldd	r26, Z+6	; 0x06
+     248:	b7 81       	ldd	r27, Z+7	; 0x07
+     24a:	ed 91       	ld	r30, X+
+     24c:	fc 91       	ld	r31, X
+     24e:	11 97       	sbiw	r26, 0x01	; 1
+     250:	8f e1       	ldi	r24, 0x1F	; 31
+     252:	f8 22       	and	r15, r24
+     254:	80 e2       	ldi	r24, 0x20	; 32
+     256:	f8 2a       	or	r15, r24
+     258:	01 90       	ld	r0, Z+
+     25a:	f0 81       	ld	r31, Z
+     25c:	e0 2d       	mov	r30, r0
+     25e:	cd 01       	movw	r24, r26
+     260:	6f 2d       	mov	r22, r15
+     262:	09 95       	icall
+    transmitSync(value,len);
+     264:	c8 01       	movw	r24, r16
+     266:	b6 01       	movw	r22, r12
+     268:	4e 2d       	mov	r20, r14
+     26a:	0e 94 bd 00 	call	0x17a	; 0x17a <_ZN6Nrf24l12transmitSyncEPhh>
+    csnHi();
+     26e:	c8 01       	movw	r24, r16
+     270:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <_ZN6Nrf24l5csnHiEv>
+}
+     274:	1f 91       	pop	r17
+     276:	0f 91       	pop	r16
+     278:	ff 90       	pop	r15
+     27a:	ef 90       	pop	r14
+     27c:	df 90       	pop	r13
+     27e:	cf 90       	pop	r12
+     280:	08 95       	ret
+
+00000282 <_ZN6Nrf24l8setTADDREPh>:
+	ceLow();
+	writeRegister(RX_ADDR_P1,adr,mirf_ADDR_LEN);
+	ceHi();
+}
+
+void Nrf24l::setTADDR(uint8_t * adr)
+     282:	ef 92       	push	r14
+     284:	ff 92       	push	r15
+     286:	0f 93       	push	r16
+     288:	1f 93       	push	r17
+     28a:	8c 01       	movw	r16, r24
+     28c:	7b 01       	movw	r14, r22
+{
+	/*
+	 * RX_ADDR_P0 must be set to the sending addr for auto ack to work.
+	 */
+
+	writeRegister(RX_ADDR_P0,adr,mirf_ADDR_LEN);
+     28e:	6a e0       	ldi	r22, 0x0A	; 10
+     290:	a7 01       	movw	r20, r14
+     292:	25 e0       	ldi	r18, 0x05	; 5
+     294:	0e 94 16 01 	call	0x22c	; 0x22c <_ZN6Nrf24l13writeRegisterEhPhh>
+	writeRegister(TX_ADDR,adr,mirf_ADDR_LEN);
+     298:	c8 01       	movw	r24, r16
+     29a:	60 e1       	ldi	r22, 0x10	; 16
+     29c:	a7 01       	movw	r20, r14
+     29e:	25 e0       	ldi	r18, 0x05	; 5
+     2a0:	0e 94 16 01 	call	0x22c	; 0x22c <_ZN6Nrf24l13writeRegisterEhPhh>
+}
+     2a4:	1f 91       	pop	r17
+     2a6:	0f 91       	pop	r16
+     2a8:	ff 90       	pop	r15
+     2aa:	ef 90       	pop	r14
+     2ac:	08 95       	ret
+
+000002ae <_ZN6Nrf24l12readRegisterEhPhh>:
+    spi->transfer(W_REGISTER | (REGISTER_MASK & reg));
+    spi->transfer(value);
+    csnHi();
+}
+
+void Nrf24l::readRegister(uint8_t reg, uint8_t * value, uint8_t len)
+     2ae:	cf 92       	push	r12
+     2b0:	df 92       	push	r13
+     2b2:	ef 92       	push	r14
+     2b4:	ff 92       	push	r15
+     2b6:	0f 93       	push	r16
+     2b8:	1f 93       	push	r17
+     2ba:	8c 01       	movw	r16, r24
+     2bc:	f6 2e       	mov	r15, r22
+     2be:	6a 01       	movw	r12, r20
+     2c0:	e2 2e       	mov	r14, r18
+// Reads an array of bytes from the given start position in the MiRF registers.
+{
+    csnLow();
+     2c2:	0e 94 f3 00 	call	0x1e6	; 0x1e6 <_ZN6Nrf24l6csnLowEv>
+    spi->transfer(R_REGISTER | (REGISTER_MASK & reg));
+     2c6:	f8 01       	movw	r30, r16
+     2c8:	a6 81       	ldd	r26, Z+6	; 0x06
+     2ca:	b7 81       	ldd	r27, Z+7	; 0x07
+     2cc:	ed 91       	ld	r30, X+
+     2ce:	fc 91       	ld	r31, X
+     2d0:	11 97       	sbiw	r26, 0x01	; 1
+     2d2:	8f e1       	ldi	r24, 0x1F	; 31
+     2d4:	f8 22       	and	r15, r24
+     2d6:	01 90       	ld	r0, Z+
+     2d8:	f0 81       	ld	r31, Z
+     2da:	e0 2d       	mov	r30, r0
+     2dc:	cd 01       	movw	r24, r26
+     2de:	6f 2d       	mov	r22, r15
+     2e0:	09 95       	icall
+    transferSync(value,value,len);
+     2e2:	c8 01       	movw	r24, r16
+     2e4:	b6 01       	movw	r22, r12
+     2e6:	a6 01       	movw	r20, r12
+     2e8:	2e 2d       	mov	r18, r14
+     2ea:	0e 94 8e 00 	call	0x11c	; 0x11c <_ZN6Nrf24l12transferSyncEPhS0_h>
+    csnHi();
+     2ee:	c8 01       	movw	r24, r16
+     2f0:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <_ZN6Nrf24l5csnHiEv>
+}
+     2f4:	1f 91       	pop	r17
+     2f6:	0f 91       	pop	r16
+     2f8:	ff 90       	pop	r15
+     2fa:	ef 90       	pop	r14
+     2fc:	df 90       	pop	r13
+     2fe:	cf 90       	pop	r12
+     300:	08 95       	ret
+
+00000302 <_ZN6Nrf24l9getStatusEv>:
+		return true;
+	}
+	return false;
+}
+
+uint8_t Nrf24l::getStatus(){
+     302:	df 93       	push	r29
+     304:	cf 93       	push	r28
+     306:	0f 92       	push	r0
+     308:	cd b7       	in	r28, 0x3d	; 61
+     30a:	de b7       	in	r29, 0x3e	; 62
+	uint8_t rv;
+	readRegister(STATUS,&rv,1);
+     30c:	67 e0       	ldi	r22, 0x07	; 7
+     30e:	ae 01       	movw	r20, r28
+     310:	4f 5f       	subi	r20, 0xFF	; 255
+     312:	5f 4f       	sbci	r21, 0xFF	; 255
+     314:	21 e0       	ldi	r18, 0x01	; 1
+     316:	0e 94 57 01 	call	0x2ae	; 0x2ae <_ZN6Nrf24l12readRegisterEhPhh>
+	return rv;
+}
+     31a:	89 81       	ldd	r24, Y+1	; 0x01
+     31c:	0f 90       	pop	r0
+     31e:	cf 91       	pop	r28
+     320:	df 91       	pop	r29
+     322:	08 95       	ret
+
+00000324 <_ZN6Nrf24l14configRegisterEhh>:
+    // So if we're going to clear RX_DR here, we need to check the RX FIFO
+    // in the dataReady() function
+    configRegister(STATUS,(1<<RX_DR));   // Reset status register
+}
+
+void Nrf24l::configRegister(uint8_t reg, uint8_t value)
+     324:	ef 92       	push	r14
+     326:	ff 92       	push	r15
+     328:	0f 93       	push	r16
+     32a:	1f 93       	push	r17
+     32c:	7c 01       	movw	r14, r24
+     32e:	16 2f       	mov	r17, r22
+     330:	04 2f       	mov	r16, r20
+// Clocks only one byte into the given MiRF register
+{
+    csnLow();
+     332:	0e 94 f3 00 	call	0x1e6	; 0x1e6 <_ZN6Nrf24l6csnLowEv>
+    spi->transfer(W_REGISTER | (REGISTER_MASK & reg));
+     336:	f7 01       	movw	r30, r14
+     338:	a6 81       	ldd	r26, Z+6	; 0x06
+     33a:	b7 81       	ldd	r27, Z+7	; 0x07
+     33c:	ed 91       	ld	r30, X+
+     33e:	fc 91       	ld	r31, X
+     340:	11 97       	sbiw	r26, 0x01	; 1
+     342:	1f 71       	andi	r17, 0x1F	; 31
+     344:	10 62       	ori	r17, 0x20	; 32
+     346:	01 90       	ld	r0, Z+
+     348:	f0 81       	ld	r31, Z
+     34a:	e0 2d       	mov	r30, r0
+     34c:	cd 01       	movw	r24, r26
+     34e:	61 2f       	mov	r22, r17
+     350:	09 95       	icall
+    spi->transfer(value);
+     352:	f7 01       	movw	r30, r14
+     354:	a6 81       	ldd	r26, Z+6	; 0x06
+     356:	b7 81       	ldd	r27, Z+7	; 0x07
+     358:	ed 91       	ld	r30, X+
+     35a:	fc 91       	ld	r31, X
+     35c:	11 97       	sbiw	r26, 0x01	; 1
+     35e:	01 90       	ld	r0, Z+
+     360:	f0 81       	ld	r31, Z
+     362:	e0 2d       	mov	r30, r0
+     364:	cd 01       	movw	r24, r26
+     366:	60 2f       	mov	r22, r16
+     368:	09 95       	icall
+    csnHi();
+     36a:	c7 01       	movw	r24, r14
+     36c:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <_ZN6Nrf24l5csnHiEv>
+}
+     370:	1f 91       	pop	r17
+     372:	0f 91       	pop	r16
+     374:	ff 90       	pop	r15
+     376:	ef 90       	pop	r14
+     378:	08 95       	ret
+
+0000037a <_ZN6Nrf24l9powerUpTxEv>:
+    csnLow();
+    spi->transfer( FLUSH_RX );
+    csnHi();
+}
+
+void Nrf24l::powerUpTx(){
+     37a:	fc 01       	movw	r30, r24
+	PTX = 1;
+     37c:	81 e0       	ldi	r24, 0x01	; 1
+     37e:	80 83       	st	Z, r24
+	configRegister(CONFIG, mirf_CONFIG | ( (1<<PWR_UP) | (0<<PRIM_RX) ) );
+     380:	cf 01       	movw	r24, r30
+     382:	60 e0       	ldi	r22, 0x00	; 0
+     384:	4a e0       	ldi	r20, 0x0A	; 10
+     386:	0e 94 92 01 	call	0x324	; 0x324 <_ZN6Nrf24l14configRegisterEhh>
+}
+     38a:	08 95       	ret
+
+0000038c <_ZN6Nrf24l5ceLowEv>:
+void Nrf24l::ceHi(){
+	digitalWrite(cePin,HIGH);
+}
+
+void Nrf24l::ceLow(){
+	digitalWrite(cePin,LOW);
+     38c:	fc 01       	movw	r30, r24
+     38e:	81 81       	ldd	r24, Z+1	; 0x01
+     390:	60 e0       	ldi	r22, 0x00	; 0
+     392:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+}
+     396:	08 95       	ret
+
+00000398 <_ZN6Nrf24l4ceHiEv>:
+	digitalWrite(pwrPin,HIGH);
+	delay(10);
+}
+
+void Nrf24l::ceHi(){
+	digitalWrite(cePin,HIGH);
+     398:	fc 01       	movw	r30, r24
+     39a:	81 81       	ldd	r24, Z+1	; 0x01
+     39c:	61 e0       	ldi	r22, 0x01	; 1
+     39e:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+}
+     3a2:	08 95       	ret
+
+000003a4 <_ZN6Nrf24l9powerUpRxEv>:
+	uint8_t rv;
+	readRegister(STATUS,&rv,1);
+	return rv;
+}
+
+void Nrf24l::powerUpRx(){
+     3a4:	0f 93       	push	r16
+     3a6:	1f 93       	push	r17
+     3a8:	8c 01       	movw	r16, r24
+	PTX = 0;
+     3aa:	fc 01       	movw	r30, r24
+     3ac:	10 82       	st	Z, r1
+	ceLow();
+     3ae:	0e 94 c6 01 	call	0x38c	; 0x38c <_ZN6Nrf24l5ceLowEv>
+	configRegister(CONFIG, mirf_CONFIG | ( (1<<PWR_UP) | (1<<PRIM_RX) ) );
+     3b2:	c8 01       	movw	r24, r16
+     3b4:	60 e0       	ldi	r22, 0x00	; 0
+     3b6:	4b e0       	ldi	r20, 0x0B	; 11
+     3b8:	0e 94 92 01 	call	0x324	; 0x324 <_ZN6Nrf24l14configRegisterEhh>
+	ceHi();
+     3bc:	c8 01       	movw	r24, r16
+     3be:	0e 94 cc 01 	call	0x398	; 0x398 <_ZN6Nrf24l4ceHiEv>
+	configRegister(STATUS,(1 << TX_DS) | (1 << MAX_RT)); 
+     3c2:	c8 01       	movw	r24, r16
+     3c4:	67 e0       	ldi	r22, 0x07	; 7
+     3c6:	40 e3       	ldi	r20, 0x30	; 48
+     3c8:	0e 94 92 01 	call	0x324	; 0x324 <_ZN6Nrf24l14configRegisterEhh>
+}
+     3cc:	1f 91       	pop	r17
+     3ce:	0f 91       	pop	r16
+     3d0:	08 95       	ret
+
+000003d2 <_ZN6Nrf24l9isSendingEv>:
+ * Test if chip is still sending.
+ * When sending has finished return chip to listening.
+ *
+ */
+
+bool Nrf24l::isSending(){
+     3d2:	cf 93       	push	r28
+     3d4:	df 93       	push	r29
+     3d6:	ec 01       	movw	r28, r24
+	uint8_t status;
+	if(PTX){
+     3d8:	88 81       	ld	r24, Y
+     3da:	88 23       	and	r24, r24
+     3dc:	59 f0       	breq	.+22     	; 0x3f4 <_ZN6Nrf24l9isSendingEv+0x22>
+		status = getStatus();
+     3de:	ce 01       	movw	r24, r28
+     3e0:	0e 94 81 01 	call	0x302	; 0x302 <_ZN6Nrf24l9getStatusEv>
+	    	
+		/*
+		 *  if sending successful (TX_DS) or max retries exceded (MAX_RT).
+		 */
+
+		if((status & ((1 << TX_DS)  | (1 << MAX_RT)))){
+     3e4:	80 73       	andi	r24, 0x30	; 48
+     3e6:	11 f4       	brne	.+4      	; 0x3ec <_ZN6Nrf24l9isSendingEv+0x1a>
+     3e8:	81 e0       	ldi	r24, 0x01	; 1
+     3ea:	04 c0       	rjmp	.+8      	; 0x3f4 <_ZN6Nrf24l9isSendingEv+0x22>
+			powerUpRx();
+     3ec:	ce 01       	movw	r24, r28
+     3ee:	0e 94 d2 01 	call	0x3a4	; 0x3a4 <_ZN6Nrf24l9powerUpRxEv>
+     3f2:	80 e0       	ldi	r24, 0x00	; 0
+		}
+
+		return true;
+	}
+	return false;
+}
+     3f4:	df 91       	pop	r29
+     3f6:	cf 91       	pop	r28
+     3f8:	08 95       	ret
+
+000003fa <_ZN6Nrf24l6configEv>:
+    spi->begin();
+
+}
+
+
+void Nrf24l::config() 
+     3fa:	0f 93       	push	r16
+     3fc:	1f 93       	push	r17
+     3fe:	8c 01       	movw	r16, r24
+// Sets the important registers in the MiRF module and powers the module
+// in receiving mode
+// NB: channel and payload must be set now.
+{
+    // Set RF channel
+	configRegister(RF_CH,channel);
+     400:	65 e0       	ldi	r22, 0x05	; 5
+     402:	f8 01       	movw	r30, r16
+     404:	44 81       	ldd	r20, Z+4	; 0x04
+     406:	0e 94 92 01 	call	0x324	; 0x324 <_ZN6Nrf24l14configRegisterEhh>
+
+    // Set length of incoming payload 
+	configRegister(RX_PW_P0, payload);
+     40a:	c8 01       	movw	r24, r16
+     40c:	61 e1       	ldi	r22, 0x11	; 17
+     40e:	f8 01       	movw	r30, r16
+     410:	45 81       	ldd	r20, Z+5	; 0x05
+     412:	0e 94 92 01 	call	0x324	; 0x324 <_ZN6Nrf24l14configRegisterEhh>
+	configRegister(RX_PW_P1, payload);
+     416:	c8 01       	movw	r24, r16
+     418:	62 e1       	ldi	r22, 0x12	; 18
+     41a:	f8 01       	movw	r30, r16
+     41c:	45 81       	ldd	r20, Z+5	; 0x05
+     41e:	0e 94 92 01 	call	0x324	; 0x324 <_ZN6Nrf24l14configRegisterEhh>
+
+    // Start receiver 
+    powerUpRx();
+     422:	c8 01       	movw	r24, r16
+     424:	0e 94 d2 01 	call	0x3a4	; 0x3a4 <_ZN6Nrf24l9powerUpRxEv>
+    flushRx();
+     428:	c8 01       	movw	r24, r16
+     42a:	0e 94 ff 00 	call	0x1fe	; 0x1fe <_ZN6Nrf24l7flushRxEv>
+}
+     42e:	1f 91       	pop	r17
+     430:	0f 91       	pop	r16
+     432:	08 95       	ret
+
+00000434 <_ZN6Nrf24l4sendEPh>:
+    transmitSync(value,len);
+    csnHi();
+}
+
+
+void Nrf24l::send(uint8_t * value) 
+     434:	0f 93       	push	r16
+     436:	1f 93       	push	r17
+     438:	cf 93       	push	r28
+     43a:	df 93       	push	r29
+     43c:	ec 01       	movw	r28, r24
+     43e:	8b 01       	movw	r16, r22
+// Sends a data package to the default address. Be sure to send the correct
+// amount of bytes as configured as payload on the receiver.
+{
+    uint8_t status;
+    status = getStatus();
+     440:	0e 94 81 01 	call	0x302	; 0x302 <_ZN6Nrf24l9getStatusEv>
+     444:	07 c0       	rjmp	.+14     	; 0x454 <_ZN6Nrf24l4sendEPh+0x20>
+
+    while (PTX) {
+	    status = getStatus();
+     446:	ce 01       	movw	r24, r28
+     448:	0e 94 81 01 	call	0x302	; 0x302 <_ZN6Nrf24l9getStatusEv>
+
+	    if((status & ((1 << TX_DS)  | (1 << MAX_RT)))){
+     44c:	80 73       	andi	r24, 0x30	; 48
+     44e:	11 f0       	breq	.+4      	; 0x454 <_ZN6Nrf24l4sendEPh+0x20>
+		    PTX = 0;
+     450:	18 82       	st	Y, r1
+     452:	03 c0       	rjmp	.+6      	; 0x45a <_ZN6Nrf24l4sendEPh+0x26>
+// amount of bytes as configured as payload on the receiver.
+{
+    uint8_t status;
+    status = getStatus();
+
+    while (PTX) {
+     454:	88 81       	ld	r24, Y
+     456:	88 23       	and	r24, r24
+     458:	b1 f7       	brne	.-20     	; 0x446 <_ZN6Nrf24l4sendEPh+0x12>
+		    PTX = 0;
+		    break;
+	    }
+    }                  // Wait until last paket is send
+
+    ceLow();
+     45a:	ce 01       	movw	r24, r28
+     45c:	0e 94 c6 01 	call	0x38c	; 0x38c <_ZN6Nrf24l5ceLowEv>
+    
+    powerUpTx();       // Set to transmitter mode , Power up
+     460:	ce 01       	movw	r24, r28
+     462:	0e 94 bd 01 	call	0x37a	; 0x37a <_ZN6Nrf24l9powerUpTxEv>
+    
+    csnLow();                    // Pull down chip select
+     466:	ce 01       	movw	r24, r28
+     468:	0e 94 f3 00 	call	0x1e6	; 0x1e6 <_ZN6Nrf24l6csnLowEv>
+    spi->transfer( FLUSH_TX );     // Write cmd to flush tx fifo
+     46c:	ae 81       	ldd	r26, Y+6	; 0x06
+     46e:	bf 81       	ldd	r27, Y+7	; 0x07
+     470:	ed 91       	ld	r30, X+
+     472:	fc 91       	ld	r31, X
+     474:	11 97       	sbiw	r26, 0x01	; 1
+     476:	01 90       	ld	r0, Z+
+     478:	f0 81       	ld	r31, Z
+     47a:	e0 2d       	mov	r30, r0
+     47c:	cd 01       	movw	r24, r26
+     47e:	61 ee       	ldi	r22, 0xE1	; 225
+     480:	09 95       	icall
+    csnHi();                    // Pull up chip select
+     482:	ce 01       	movw	r24, r28
+     484:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <_ZN6Nrf24l5csnHiEv>
+    
+    csnLow();                    // Pull down chip select
+     488:	ce 01       	movw	r24, r28
+     48a:	0e 94 f3 00 	call	0x1e6	; 0x1e6 <_ZN6Nrf24l6csnLowEv>
+    spi->transfer( W_TX_PAYLOAD ); // Write cmd to write payload
+     48e:	ae 81       	ldd	r26, Y+6	; 0x06
+     490:	bf 81       	ldd	r27, Y+7	; 0x07
+     492:	ed 91       	ld	r30, X+
+     494:	fc 91       	ld	r31, X
+     496:	11 97       	sbiw	r26, 0x01	; 1
+     498:	01 90       	ld	r0, Z+
+     49a:	f0 81       	ld	r31, Z
+     49c:	e0 2d       	mov	r30, r0
+     49e:	cd 01       	movw	r24, r26
+     4a0:	60 ea       	ldi	r22, 0xA0	; 160
+     4a2:	09 95       	icall
+    transmitSync(value,payload);   // Write payload
+     4a4:	ce 01       	movw	r24, r28
+     4a6:	b8 01       	movw	r22, r16
+     4a8:	4d 81       	ldd	r20, Y+5	; 0x05
+     4aa:	0e 94 bd 00 	call	0x17a	; 0x17a <_ZN6Nrf24l12transmitSyncEPhh>
+    csnHi();                    // Pull up chip select
+     4ae:	ce 01       	movw	r24, r28
+     4b0:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <_ZN6Nrf24l5csnHiEv>
+
+    ceHi();                     // Start transmission
+     4b4:	ce 01       	movw	r24, r28
+     4b6:	0e 94 cc 01 	call	0x398	; 0x398 <_ZN6Nrf24l4ceHiEv>
+}
+     4ba:	df 91       	pop	r29
+     4bc:	cf 91       	pop	r28
+     4be:	1f 91       	pop	r17
+     4c0:	0f 91       	pop	r16
+     4c2:	08 95       	ret
+
+000004c4 <_ZN6Nrf24l8setRADDREPh>:
+    // Start receiver 
+    powerUpRx();
+    flushRx();
+}
+
+void Nrf24l::setRADDR(uint8_t * adr) 
+     4c4:	ef 92       	push	r14
+     4c6:	ff 92       	push	r15
+     4c8:	0f 93       	push	r16
+     4ca:	1f 93       	push	r17
+     4cc:	8c 01       	movw	r16, r24
+     4ce:	7b 01       	movw	r14, r22
+// Sets the receiving address
+{
+	ceLow();
+     4d0:	0e 94 c6 01 	call	0x38c	; 0x38c <_ZN6Nrf24l5ceLowEv>
+	writeRegister(RX_ADDR_P1,adr,mirf_ADDR_LEN);
+     4d4:	c8 01       	movw	r24, r16
+     4d6:	6b e0       	ldi	r22, 0x0B	; 11
+     4d8:	a7 01       	movw	r20, r14
+     4da:	25 e0       	ldi	r18, 0x05	; 5
+     4dc:	0e 94 16 01 	call	0x22c	; 0x22c <_ZN6Nrf24l13writeRegisterEhPhh>
+	ceHi();
+     4e0:	c8 01       	movw	r24, r16
+     4e2:	0e 94 cc 01 	call	0x398	; 0x398 <_ZN6Nrf24l4ceHiEv>
+}
+     4e6:	1f 91       	pop	r17
+     4e8:	0f 91       	pop	r16
+     4ea:	ff 90       	pop	r15
+     4ec:	ef 90       	pop	r14
+     4ee:	08 95       	ret
+
+000004f0 <_ZN6Nrf24l10powerResetEv>:
+void Nrf24l::powerUpTx(){
+	PTX = 1;
+	configRegister(CONFIG, mirf_CONFIG | ( (1<<PWR_UP) | (0<<PRIM_RX) ) );
+}
+
+void Nrf24l::powerReset(){
+     4f0:	0f 93       	push	r16
+     4f2:	1f 93       	push	r17
+     4f4:	8c 01       	movw	r16, r24
+	digitalWrite(pwrPin, LOW);
+     4f6:	fc 01       	movw	r30, r24
+     4f8:	83 81       	ldd	r24, Z+3	; 0x03
+     4fa:	60 e0       	ldi	r22, 0x00	; 0
+     4fc:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+	delay(10);
+     500:	6a e0       	ldi	r22, 0x0A	; 10
+     502:	70 e0       	ldi	r23, 0x00	; 0
+     504:	80 e0       	ldi	r24, 0x00	; 0
+     506:	90 e0       	ldi	r25, 0x00	; 0
+     508:	0e 94 6f 08 	call	0x10de	; 0x10de <delay>
+	digitalWrite(pwrPin,HIGH);
+     50c:	f8 01       	movw	r30, r16
+     50e:	83 81       	ldd	r24, Z+3	; 0x03
+     510:	61 e0       	ldi	r22, 0x01	; 1
+     512:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+	delay(10);
+     516:	6a e0       	ldi	r22, 0x0A	; 10
+     518:	70 e0       	ldi	r23, 0x00	; 0
+     51a:	80 e0       	ldi	r24, 0x00	; 0
+     51c:	90 e0       	ldi	r25, 0x00	; 0
+     51e:	0e 94 6f 08 	call	0x10de	; 0x10de <delay>
+}
+     522:	1f 91       	pop	r17
+     524:	0f 91       	pop	r16
+     526:	08 95       	ret
+
+00000528 <_ZN6Nrf24l4initEv>:
+		spi->transfer(dataout[i]);
+	}
+}
+
+
+void Nrf24l::init() 
+     528:	0f 93       	push	r16
+     52a:	1f 93       	push	r17
+     52c:	8c 01       	movw	r16, r24
+// Initializes pins to communicate with the MiRF module
+// Should be called in the early initializing phase at startup.
+{   
+	pinMode(pwrPin, OUTPUT);
+     52e:	fc 01       	movw	r30, r24
+     530:	83 81       	ldd	r24, Z+3	; 0x03
+     532:	61 e0       	ldi	r22, 0x01	; 1
+     534:	0e 94 03 09 	call	0x1206	; 0x1206 <pinMode>
+    pinMode(cePin,OUTPUT);
+     538:	f8 01       	movw	r30, r16
+     53a:	81 81       	ldd	r24, Z+1	; 0x01
+     53c:	61 e0       	ldi	r22, 0x01	; 1
+     53e:	0e 94 03 09 	call	0x1206	; 0x1206 <pinMode>
+    pinMode(csnPin,OUTPUT);
+     542:	f8 01       	movw	r30, r16
+     544:	82 81       	ldd	r24, Z+2	; 0x02
+     546:	61 e0       	ldi	r22, 0x01	; 1
+     548:	0e 94 03 09 	call	0x1206	; 0x1206 <pinMode>
+    powerReset();
+     54c:	c8 01       	movw	r24, r16
+     54e:	0e 94 78 02 	call	0x4f0	; 0x4f0 <_ZN6Nrf24l10powerResetEv>
+
+    ceLow();
+     552:	c8 01       	movw	r24, r16
+     554:	0e 94 c6 01 	call	0x38c	; 0x38c <_ZN6Nrf24l5ceLowEv>
+    csnHi();
+     558:	c8 01       	movw	r24, r16
+     55a:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <_ZN6Nrf24l5csnHiEv>
+
+    // Initialize spi module
+    spi->begin();
+     55e:	f8 01       	movw	r30, r16
+     560:	a6 81       	ldd	r26, Z+6	; 0x06
+     562:	b7 81       	ldd	r27, Z+7	; 0x07
+     564:	ed 91       	ld	r30, X+
+     566:	fc 91       	ld	r31, X
+     568:	11 97       	sbiw	r26, 0x01	; 1
+     56a:	02 80       	ldd	r0, Z+2	; 0x02
+     56c:	f3 81       	ldd	r31, Z+3	; 0x03
+     56e:	e0 2d       	mov	r30, r0
+     570:	cd 01       	movw	r24, r26
+     572:	09 95       	icall
+
+}
+     574:	1f 91       	pop	r17
+     576:	0f 91       	pop	r16
+     578:	08 95       	ret
+
+0000057a <_ZN21MirfHardwareSpiDriver8transferEh>:
+};
+
+extern SPIClass SPI;
+
+byte SPIClass::transfer(byte _data) {
+  SPDR = _data;
+     57a:	6e bd       	out	0x2e, r22	; 46
+  while (!(SPSR & _BV(SPIF)))
+     57c:	0d b4       	in	r0, 0x2d	; 45
+     57e:	07 fe       	sbrs	r0, 7
+     580:	fd cf       	rjmp	.-6      	; 0x57c <_ZN21MirfHardwareSpiDriver8transferEh+0x2>
+    ;
+  return SPDR;
+     582:	8e b5       	in	r24, 0x2e	; 46
+#include "MirfHardwareSpiDriver.h"
+uint8_t MirfHardwareSpiDriver::transfer(uint8_t data){
+	return SPI.transfer(data);
+}
+     584:	08 95       	ret
+
+00000586 <_ZN21MirfHardwareSpiDriver3endEv>:
+	SPI.setDataMode(SPI_MODE0);
+	SPI.setClockDivider(SPI_2XCLOCK_MASK);
+}
+
+void MirfHardwareSpiDriver::end(){
+}
+     586:	08 95       	ret
+
+00000588 <_GLOBAL__I__ZN21MirfHardwareSpiDriver8transferEh>:
+#ifndef __MIRF_HARDWARE_SPI_DRIVER
+#define __MIRF_HARDWARE_SPI_DRIVER 
+
+#include "../SPI.h"
+
+class MirfHardwareSpiDriver : public MirfSpiDriver {
+     588:	85 e9       	ldi	r24, 0x95	; 149
+     58a:	91 e0       	ldi	r25, 0x01	; 1
+     58c:	90 93 b5 01 	sts	0x01B5, r25
+     590:	80 93 b4 01 	sts	0x01B4, r24
+
+MirfHardwareSpiDriver MirfHardwareSpi;
+     594:	08 95       	ret
+
+00000596 <_ZN21MirfHardwareSpiDriver5beginEv>:
+uint8_t MirfHardwareSpiDriver::transfer(uint8_t data){
+	return SPI.transfer(data);
+}
+
+void MirfHardwareSpiDriver::begin(){
+	SPI.begin();
+     596:	0e 94 ea 02 	call	0x5d4	; 0x5d4 <_ZN8SPIClass5beginEv>
+	SPI.setDataMode(SPI_MODE0);
+     59a:	80 e0       	ldi	r24, 0x00	; 0
+     59c:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <_ZN8SPIClass11setDataModeEh>
+	SPI.setClockDivider(SPI_2XCLOCK_MASK);
+     5a0:	81 e0       	ldi	r24, 0x01	; 1
+     5a2:	0e 94 d9 02 	call	0x5b2	; 0x5b2 <_ZN8SPIClass15setClockDividerEh>
+}
+     5a6:	08 95       	ret
+
+000005a8 <_ZN8SPIClass11setDataModeEh>:
+  }
+}
+
+void SPIClass::setDataMode(uint8_t mode)
+{
+  SPCR = (SPCR & ~SPI_MODE_MASK) | mode;
+     5a8:	9c b5       	in	r25, 0x2c	; 44
+     5aa:	93 7f       	andi	r25, 0xF3	; 243
+     5ac:	98 2b       	or	r25, r24
+     5ae:	9c bd       	out	0x2c, r25	; 44
+}
+     5b0:	08 95       	ret
+
+000005b2 <_ZN8SPIClass15setClockDividerEh>:
+
+void SPIClass::setClockDivider(uint8_t rate)
+{
+  SPCR = (SPCR & ~SPI_CLOCK_MASK) | (rate & SPI_CLOCK_MASK);
+     5b2:	2c b5       	in	r18, 0x2c	; 44
+     5b4:	38 2f       	mov	r19, r24
+     5b6:	33 70       	andi	r19, 0x03	; 3
+     5b8:	2c 7f       	andi	r18, 0xFC	; 252
+     5ba:	32 2b       	or	r19, r18
+     5bc:	3c bd       	out	0x2c, r19	; 44
+  SPSR = (SPSR & ~SPI_2XCLOCK_MASK) | ((rate >> 2) & SPI_2XCLOCK_MASK);
+     5be:	2d b5       	in	r18, 0x2d	; 45
+     5c0:	90 e0       	ldi	r25, 0x00	; 0
+     5c2:	95 95       	asr	r25
+     5c4:	87 95       	ror	r24
+     5c6:	95 95       	asr	r25
+     5c8:	87 95       	ror	r24
+     5ca:	81 70       	andi	r24, 0x01	; 1
+     5cc:	2e 7f       	andi	r18, 0xFE	; 254
+     5ce:	82 2b       	or	r24, r18
+     5d0:	8d bd       	out	0x2d, r24	; 45
+}
+     5d2:	08 95       	ret
+
+000005d4 <_ZN8SPIClass5beginEv>:
+  // MISO pin automatically overrides to INPUT.
+  // When the SS pin is set as OUTPUT, it can be used as
+  // a general purpose output port (it doesn't influence
+  // SPI operations).
+
+  pinMode(SCK, OUTPUT);
+     5d4:	8d e0       	ldi	r24, 0x0D	; 13
+     5d6:	61 e0       	ldi	r22, 0x01	; 1
+     5d8:	0e 94 03 09 	call	0x1206	; 0x1206 <pinMode>
+  pinMode(MOSI, OUTPUT);
+     5dc:	8b e0       	ldi	r24, 0x0B	; 11
+     5de:	61 e0       	ldi	r22, 0x01	; 1
+     5e0:	0e 94 03 09 	call	0x1206	; 0x1206 <pinMode>
+  pinMode(SS, OUTPUT);
+     5e4:	8a e0       	ldi	r24, 0x0A	; 10
+     5e6:	61 e0       	ldi	r22, 0x01	; 1
+     5e8:	0e 94 03 09 	call	0x1206	; 0x1206 <pinMode>
+  
+  digitalWrite(SCK, LOW);
+     5ec:	8d e0       	ldi	r24, 0x0D	; 13
+     5ee:	60 e0       	ldi	r22, 0x00	; 0
+     5f0:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+  digitalWrite(MOSI, LOW);
+     5f4:	8b e0       	ldi	r24, 0x0B	; 11
+     5f6:	60 e0       	ldi	r22, 0x00	; 0
+     5f8:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+  digitalWrite(SS, HIGH);
+     5fc:	8a e0       	ldi	r24, 0x0A	; 10
+     5fe:	61 e0       	ldi	r22, 0x01	; 1
+     600:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+
+  // Warning: if the SS pin ever becomes a LOW INPUT then SPI 
+  // automatically switches to Slave, so the data direction of 
+  // the SS pin MUST be kept as OUTPUT.
+  SPCR |= _BV(MSTR);
+     604:	8c b5       	in	r24, 0x2c	; 44
+     606:	80 61       	ori	r24, 0x10	; 16
+     608:	8c bd       	out	0x2c, r24	; 44
+  SPCR |= _BV(SPE);
+     60a:	8c b5       	in	r24, 0x2c	; 44
+     60c:	80 64       	ori	r24, 0x40	; 64
+     60e:	8c bd       	out	0x2c, r24	; 44
+}
+     610:	08 95       	ret
+
+00000612 <__vector_11>:
+}
+
+#ifndef WIRING // Wiring pre-defines signal handlers so don't define any if compiling for the Wiring platform
+// Interrupt handlers for Arduino 
+#if defined(_useTimer1)
+SIGNAL (TIMER1_COMPA_vect) 
+     612:	1f 92       	push	r1
+     614:	0f 92       	push	r0
+     616:	0f b6       	in	r0, 0x3f	; 63
+     618:	0f 92       	push	r0
+     61a:	11 24       	eor	r1, r1
+     61c:	2f 93       	push	r18
+     61e:	3f 93       	push	r19
+     620:	4f 93       	push	r20
+     622:	5f 93       	push	r21
+     624:	6f 93       	push	r22
+     626:	7f 93       	push	r23
+     628:	8f 93       	push	r24
+     62a:	9f 93       	push	r25
+     62c:	af 93       	push	r26
+     62e:	bf 93       	push	r27
+     630:	ef 93       	push	r30
+     632:	ff 93       	push	r31
+
+/************ static functions common to all instances ***********************/
+
+static inline void handle_interrupts(timer16_Sequence_t timer, volatile uint16_t *TCNTn, volatile uint16_t* OCRnA)
+{
+  if( Channel[timer] < 0 )
+     634:	80 91 db 01 	lds	r24, 0x01DB
+     638:	87 ff       	sbrs	r24, 7
+     63a:	05 c0       	rjmp	.+10     	; 0x646 <__vector_11+0x34>
+    *TCNTn = 0; // channel set to -1 indicated that refresh interval completed so reset the timer 
+     63c:	10 92 85 00 	sts	0x0085, r1
+     640:	10 92 84 00 	sts	0x0084, r1
+     644:	2b c0       	rjmp	.+86     	; 0x69c <__vector_11+0x8a>
+  else{
+    if( SERVO_INDEX(timer,Channel[timer]) < ServoCount && SERVO(timer,Channel[timer]).Pin.isActive == true )  
+     646:	20 91 db 01 	lds	r18, 0x01DB
+     64a:	33 27       	eor	r19, r19
+     64c:	27 fd       	sbrc	r18, 7
+     64e:	30 95       	com	r19
+     650:	80 91 b6 01 	lds	r24, 0x01B6
+     654:	90 e0       	ldi	r25, 0x00	; 0
+     656:	28 17       	cp	r18, r24
+     658:	39 07       	cpc	r19, r25
+     65a:	04 f5       	brge	.+64     	; 0x69c <__vector_11+0x8a>
+     65c:	80 91 db 01 	lds	r24, 0x01DB
+     660:	99 27       	eor	r25, r25
+     662:	87 fd       	sbrc	r24, 7
+     664:	90 95       	com	r25
+     666:	fc 01       	movw	r30, r24
+     668:	ee 0f       	add	r30, r30
+     66a:	ff 1f       	adc	r31, r31
+     66c:	e8 0f       	add	r30, r24
+     66e:	f9 1f       	adc	r31, r25
+     670:	e9 54       	subi	r30, 0x49	; 73
+     672:	fe 4f       	sbci	r31, 0xFE	; 254
+     674:	80 81       	ld	r24, Z
+     676:	86 ff       	sbrs	r24, 6
+     678:	11 c0       	rjmp	.+34     	; 0x69c <__vector_11+0x8a>
+      digitalWrite( SERVO(timer,Channel[timer]).Pin.nbr,LOW); // pulse this channel low if activated   
+     67a:	80 91 db 01 	lds	r24, 0x01DB
+     67e:	99 27       	eor	r25, r25
+     680:	87 fd       	sbrc	r24, 7
+     682:	90 95       	com	r25
+     684:	fc 01       	movw	r30, r24
+     686:	ee 0f       	add	r30, r30
+     688:	ff 1f       	adc	r31, r31
+     68a:	e8 0f       	add	r30, r24
+     68c:	f9 1f       	adc	r31, r25
+     68e:	e9 54       	subi	r30, 0x49	; 73
+     690:	fe 4f       	sbci	r31, 0xFE	; 254
+     692:	80 81       	ld	r24, Z
+     694:	8f 73       	andi	r24, 0x3F	; 63
+     696:	60 e0       	ldi	r22, 0x00	; 0
+     698:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+  }
+
+  Channel[timer]++;    // increment to the next channel
+     69c:	80 91 db 01 	lds	r24, 0x01DB
+     6a0:	8f 5f       	subi	r24, 0xFF	; 255
+     6a2:	80 93 db 01 	sts	0x01DB, r24
+  if( SERVO_INDEX(timer,Channel[timer]) < ServoCount && Channel[timer] < SERVOS_PER_TIMER) {
+     6a6:	20 91 db 01 	lds	r18, 0x01DB
+     6aa:	33 27       	eor	r19, r19
+     6ac:	27 fd       	sbrc	r18, 7
+     6ae:	30 95       	com	r19
+     6b0:	80 91 b6 01 	lds	r24, 0x01B6
+     6b4:	90 e0       	ldi	r25, 0x00	; 0
+     6b6:	28 17       	cp	r18, r24
+     6b8:	39 07       	cpc	r19, r25
+     6ba:	0c f0       	brlt	.+2      	; 0x6be <__vector_11+0xac>
+     6bc:	4e c0       	rjmp	.+156    	; 0x75a <__vector_11+0x148>
+     6be:	80 91 db 01 	lds	r24, 0x01DB
+     6c2:	8c 30       	cpi	r24, 0x0C	; 12
+     6c4:	0c f0       	brlt	.+2      	; 0x6c8 <__vector_11+0xb6>
+     6c6:	49 c0       	rjmp	.+146    	; 0x75a <__vector_11+0x148>
+    *OCRnA = *TCNTn + SERVO(timer,Channel[timer]).ticks;
+     6c8:	20 91 84 00 	lds	r18, 0x0084
+     6cc:	30 91 85 00 	lds	r19, 0x0085
+     6d0:	80 91 db 01 	lds	r24, 0x01DB
+     6d4:	99 27       	eor	r25, r25
+     6d6:	87 fd       	sbrc	r24, 7
+     6d8:	90 95       	com	r25
+     6da:	fc 01       	movw	r30, r24
+     6dc:	ee 0f       	add	r30, r30
+     6de:	ff 1f       	adc	r31, r31
+     6e0:	e8 0f       	add	r30, r24
+     6e2:	f9 1f       	adc	r31, r25
+     6e4:	e9 54       	subi	r30, 0x49	; 73
+     6e6:	fe 4f       	sbci	r31, 0xFE	; 254
+     6e8:	81 81       	ldd	r24, Z+1	; 0x01
+     6ea:	92 81       	ldd	r25, Z+2	; 0x02
+     6ec:	28 0f       	add	r18, r24
+     6ee:	39 1f       	adc	r19, r25
+     6f0:	30 93 89 00 	sts	0x0089, r19
+     6f4:	20 93 88 00 	sts	0x0088, r18
+    if(SERVO(timer,Channel[timer]).Pin.isActive == true)     // check if activated
+     6f8:	80 91 db 01 	lds	r24, 0x01DB
+     6fc:	99 27       	eor	r25, r25
+     6fe:	87 fd       	sbrc	r24, 7
+     700:	90 95       	com	r25
+     702:	fc 01       	movw	r30, r24
+     704:	ee 0f       	add	r30, r30
+     706:	ff 1f       	adc	r31, r31
+     708:	e8 0f       	add	r30, r24
+     70a:	f9 1f       	adc	r31, r25
+     70c:	e9 54       	subi	r30, 0x49	; 73
+     70e:	fe 4f       	sbci	r31, 0xFE	; 254
+     710:	80 81       	ld	r24, Z
+     712:	86 ff       	sbrs	r24, 6
+     714:	2a c0       	rjmp	.+84     	; 0x76a <__vector_11+0x158>
+      digitalWrite( SERVO(timer,Channel[timer]).Pin.nbr,HIGH); // its an active channel so pulse it high   
+     716:	80 91 db 01 	lds	r24, 0x01DB
+     71a:	99 27       	eor	r25, r25
+     71c:	87 fd       	sbrc	r24, 7
+     71e:	90 95       	com	r25
+     720:	fc 01       	movw	r30, r24
+     722:	ee 0f       	add	r30, r30
+     724:	ff 1f       	adc	r31, r31
+     726:	e8 0f       	add	r30, r24
+     728:	f9 1f       	adc	r31, r25
+     72a:	e9 54       	subi	r30, 0x49	; 73
+     72c:	fe 4f       	sbci	r31, 0xFE	; 254
+     72e:	80 81       	ld	r24, Z
+     730:	8f 73       	andi	r24, 0x3F	; 63
+     732:	61 e0       	ldi	r22, 0x01	; 1
+     734:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+     738:	18 c0       	rjmp	.+48     	; 0x76a <__vector_11+0x158>
+  }  
+  else { 
+    // finished all channels so wait for the refresh period to expire before starting over 
+    if( (unsigned)*TCNTn <  (usToTicks(REFRESH_INTERVAL) + 4) )  // allow a few ticks to ensure the next OCR1A not missed
+      *OCRnA = (unsigned int)usToTicks(REFRESH_INTERVAL);  
+     73a:	80 e4       	ldi	r24, 0x40	; 64
+     73c:	9c e9       	ldi	r25, 0x9C	; 156
+     73e:	05 c0       	rjmp	.+10     	; 0x74a <__vector_11+0x138>
+    else 
+      *OCRnA = *TCNTn + 4;  // at least REFRESH_INTERVAL has elapsed
+     740:	80 91 84 00 	lds	r24, 0x0084
+     744:	90 91 85 00 	lds	r25, 0x0085
+     748:	04 96       	adiw	r24, 0x04	; 4
+     74a:	90 93 89 00 	sts	0x0089, r25
+     74e:	80 93 88 00 	sts	0x0088, r24
+    Channel[timer] = -1; // this will get incremented at the end of the refresh period to start again at the first channel
+     752:	8f ef       	ldi	r24, 0xFF	; 255
+     754:	80 93 db 01 	sts	0x01DB, r24
+     758:	08 c0       	rjmp	.+16     	; 0x76a <__vector_11+0x158>
+    if(SERVO(timer,Channel[timer]).Pin.isActive == true)     // check if activated
+      digitalWrite( SERVO(timer,Channel[timer]).Pin.nbr,HIGH); // its an active channel so pulse it high   
+  }  
+  else { 
+    // finished all channels so wait for the refresh period to expire before starting over 
+    if( (unsigned)*TCNTn <  (usToTicks(REFRESH_INTERVAL) + 4) )  // allow a few ticks to ensure the next OCR1A not missed
+     75a:	80 91 84 00 	lds	r24, 0x0084
+     75e:	90 91 85 00 	lds	r25, 0x0085
+     762:	84 54       	subi	r24, 0x44	; 68
+     764:	9c 49       	sbci	r25, 0x9C	; 156
+     766:	48 f3       	brcs	.-46     	; 0x73a <__vector_11+0x128>
+     768:	eb cf       	rjmp	.-42     	; 0x740 <__vector_11+0x12e>
+// Interrupt handlers for Arduino 
+#if defined(_useTimer1)
+SIGNAL (TIMER1_COMPA_vect) 
+{ 
+  handle_interrupts(_timer1, &TCNT1, &OCR1A); 
+}
+     76a:	ff 91       	pop	r31
+     76c:	ef 91       	pop	r30
+     76e:	bf 91       	pop	r27
+     770:	af 91       	pop	r26
+     772:	9f 91       	pop	r25
+     774:	8f 91       	pop	r24
+     776:	7f 91       	pop	r23
+     778:	6f 91       	pop	r22
+     77a:	5f 91       	pop	r21
+     77c:	4f 91       	pop	r20
+     77e:	3f 91       	pop	r19
+     780:	2f 91       	pop	r18
+     782:	0f 90       	pop	r0
+     784:	0f be       	out	0x3f, r0	; 63
+     786:	0f 90       	pop	r0
+     788:	1f 90       	pop	r1
+     78a:	18 95       	reti
+
+0000078c <_Z15radio_send_waitP12radio_packetPc>:
+
+/**
+ * Sends a radio_packet to receiver at address addr and waits
+ * for send to finish.
+ */
+void radio_send_wait(radio_packet * packet, char * addr) {
+     78c:	0f 93       	push	r16
+     78e:	1f 93       	push	r17
+     790:	8c 01       	movw	r16, r24
+
+	Mirf.setTADDR((byte *)addr);
+     792:	8c ea       	ldi	r24, 0xAC	; 172
+     794:	91 e0       	ldi	r25, 0x01	; 1
+     796:	0e 94 41 01 	call	0x282	; 0x282 <_ZN6Nrf24l8setTADDREPh>
+
+	Mirf.send(packet->data);
+     79a:	8c ea       	ldi	r24, 0xAC	; 172
+     79c:	91 e0       	ldi	r25, 0x01	; 1
+     79e:	b8 01       	movw	r22, r16
+     7a0:	0e 94 1a 02 	call	0x434	; 0x434 <_ZN6Nrf24l4sendEPh>
+
+	while(Mirf.isSending()){
+     7a4:	8c ea       	ldi	r24, 0xAC	; 172
+     7a6:	91 e0       	ldi	r25, 0x01	; 1
+     7a8:	0e 94 e9 01 	call	0x3d2	; 0x3d2 <_ZN6Nrf24l9isSendingEv>
+     7ac:	88 23       	and	r24, r24
+     7ae:	d1 f7       	brne	.-12     	; 0x7a4 <_Z15radio_send_waitP12radio_packetPc+0x18>
+	}
+	// DEBUG
+	Serial.println("Finished sending");
+     7b0:	84 e6       	ldi	r24, 0x64	; 100
+     7b2:	92 e0       	ldi	r25, 0x02	; 2
+     7b4:	61 e2       	ldi	r22, 0x21	; 33
+     7b6:	71 e0       	ldi	r23, 0x01	; 1
+     7b8:	0e 94 05 08 	call	0x100a	; 0x100a <_ZN5Print7printlnEPKc>
+	delay(10);
+     7bc:	6a e0       	ldi	r22, 0x0A	; 10
+     7be:	70 e0       	ldi	r23, 0x00	; 0
+     7c0:	80 e0       	ldi	r24, 0x00	; 0
+     7c2:	90 e0       	ldi	r25, 0x00	; 0
+     7c4:	0e 94 6f 08 	call	0x10de	; 0x10de <delay>
+}
+     7c8:	1f 91       	pop	r17
+     7ca:	0f 91       	pop	r16
+     7cc:	08 95       	ret
+
+000007ce <_Z10radio_initPcii>:
+ */
+
+/**
+ * Initializes nRF24L01 Radio
+ */
+void radio_init(char * addr, int channel, int payload) {
+     7ce:	cf 92       	push	r12
+     7d0:	df 92       	push	r13
+     7d2:	ef 92       	push	r14
+     7d4:	ff 92       	push	r15
+     7d6:	0f 93       	push	r16
+     7d8:	1f 93       	push	r17
+     7da:	7c 01       	movw	r14, r24
+     7dc:	c6 2e       	mov	r12, r22
+     7de:	d4 2e       	mov	r13, r20
+
+	// Reset Radio in case it is in a bad state
+	pinMode(4, OUTPUT);
+     7e0:	84 e0       	ldi	r24, 0x04	; 4
+     7e2:	61 e0       	ldi	r22, 0x01	; 1
+     7e4:	0e 94 03 09 	call	0x1206	; 0x1206 <pinMode>
+	digitalWrite(4, LOW);
+     7e8:	84 e0       	ldi	r24, 0x04	; 4
+     7ea:	60 e0       	ldi	r22, 0x00	; 0
+     7ec:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+	delay(100);
+     7f0:	64 e6       	ldi	r22, 0x64	; 100
+     7f2:	70 e0       	ldi	r23, 0x00	; 0
+     7f4:	80 e0       	ldi	r24, 0x00	; 0
+     7f6:	90 e0       	ldi	r25, 0x00	; 0
+     7f8:	0e 94 6f 08 	call	0x10de	; 0x10de <delay>
+	digitalWrite(4, HIGH);
+     7fc:	84 e0       	ldi	r24, 0x04	; 4
+     7fe:	61 e0       	ldi	r22, 0x01	; 1
+     800:	0e 94 29 09 	call	0x1252	; 0x1252 <digitalWrite>
+	delay(100);
+     804:	64 e6       	ldi	r22, 0x64	; 100
+     806:	70 e0       	ldi	r23, 0x00	; 0
+     808:	80 e0       	ldi	r24, 0x00	; 0
+     80a:	90 e0       	ldi	r25, 0x00	; 0
+     80c:	0e 94 6f 08 	call	0x10de	; 0x10de <delay>
+
+	/*
+	 * Setup pins / SPI.
+	 */
+	Mirf.cePin = 8;
+     810:	88 e0       	ldi	r24, 0x08	; 8
+     812:	80 93 ad 01 	sts	0x01AD, r24
+	Mirf.csnPin = 9;
+     816:	89 e0       	ldi	r24, 0x09	; 9
+     818:	80 93 ae 01 	sts	0x01AE, r24
+
+	Mirf.spi = &MirfHardwareSpi;
+     81c:	84 eb       	ldi	r24, 0xB4	; 180
+     81e:	91 e0       	ldi	r25, 0x01	; 1
+     820:	90 93 b3 01 	sts	0x01B3, r25
+     824:	80 93 b2 01 	sts	0x01B2, r24
+	Mirf.init();
+     828:	0c ea       	ldi	r16, 0xAC	; 172
+     82a:	11 e0       	ldi	r17, 0x01	; 1
+     82c:	c8 01       	movw	r24, r16
+     82e:	0e 94 94 02 	call	0x528	; 0x528 <_ZN6Nrf24l4initEv>
+
+	/*
+	 * Configure reciving address.
+	 */
+	Mirf.setRADDR((byte *)addr);
+     832:	c8 01       	movw	r24, r16
+     834:	b7 01       	movw	r22, r14
+     836:	0e 94 62 02 	call	0x4c4	; 0x4c4 <_ZN6Nrf24l8setRADDREPh>
+	 * Set the payload length to sizeof(unsigned long) the
+	 * return type of millis().
+	 *
+	 * NB: payload on client and server must be the same.
+	 */
+	Mirf.payload = payload;
+     83a:	d0 92 b1 01 	sts	0x01B1, r13
+	 *
+	 * Mirf.channel = 10;
+	 *
+	 * NB: Make sure channel is legal in your area.
+	 */
+	Mirf.channel = channel;
+     83e:	c0 92 b0 01 	sts	0x01B0, r12
+
+	Mirf.config();
+     842:	c8 01       	movw	r24, r16
+     844:	0e 94 fd 01 	call	0x3fa	; 0x3fa <_ZN6Nrf24l6configEv>
+}
+     848:	1f 91       	pop	r17
+     84a:	0f 91       	pop	r16
+     84c:	ff 90       	pop	r15
+     84e:	ef 90       	pop	r14
+     850:	df 90       	pop	r13
+     852:	cf 90       	pop	r12
+     854:	08 95       	ret
+
+00000856 <loop>:
+	radio_init(BASE_ADDR, RADIO_CHANNEL, RADIO_PAYLOAD);
+
+	Serial.println("Beginning ... ");
+}
+
+void loop() {
+     856:	ef 92       	push	r14
+     858:	ff 92       	push	r15
+     85a:	0f 93       	push	r16
+     85c:	1f 93       	push	r17
+     85e:	df 93       	push	r29
+     860:	cf 93       	push	r28
+     862:	00 d0       	rcall	.+0      	; 0x864 <loop+0xe>
+     864:	0f 92       	push	r0
+     866:	cd b7       	in	r28, 0x3d	; 61
+     868:	de b7       	in	r29, 0x3e	; 62
+	radio_packet packet;
+	int input, number;
+
+	// Wait for input
+	if (!Serial.available()) return;
+     86a:	84 e6       	ldi	r24, 0x64	; 100
+     86c:	92 e0       	ldi	r25, 0x02	; 2
+     86e:	0e 94 e9 05 	call	0xbd2	; 0xbd2 <_ZN14HardwareSerial9availableEv>
+     872:	89 2b       	or	r24, r25
+     874:	09 f4       	brne	.+2      	; 0x878 <loop+0x22>
+     876:	71 c0       	rjmp	.+226    	; 0x95a <__stack+0x5b>
+
+	// Get first byte
+	input = Serial.read();
+     878:	84 e6       	ldi	r24, 0x64	; 100
+     87a:	92 e0       	ldi	r25, 0x02	; 2
+     87c:	0e 94 1a 06 	call	0xc34	; 0xc34 <_ZN14HardwareSerial4readEv>
+
+	// emergency stop command is ' key, right next to enter key
+	if (input == '\'') {
+     880:	87 32       	cpi	r24, 0x27	; 39
+     882:	91 05       	cpc	r25, r1
+     884:	99 f4       	brne	.+38     	; 0x8ac <loop+0x56>
+		packet.vars.speed = MOTOR_MIN_SPEED;
+     886:	8c eb       	ldi	r24, 0xBC	; 188
+     888:	92 e0       	ldi	r25, 0x02	; 2
+     88a:	9b 83       	std	Y+3, r25	; 0x03
+     88c:	8a 83       	std	Y+2, r24	; 0x02
+		packet.vars.motor = 'a';
+     88e:	81 e6       	ldi	r24, 0x61	; 97
+     890:	89 83       	std	Y+1, r24	; 0x01
+		radio_send_wait(&packet, COPTER_ADDR);
+     892:	ce 01       	movw	r24, r28
+     894:	01 96       	adiw	r24, 0x01	; 1
+     896:	62 e3       	ldi	r22, 0x32	; 50
+     898:	71 e0       	ldi	r23, 0x01	; 1
+     89a:	0e 94 c6 03 	call	0x78c	; 0x78c <_Z15radio_send_waitP12radio_packetPc>
+		Serial.println("Sending stop command.");
+     89e:	84 e6       	ldi	r24, 0x64	; 100
+     8a0:	92 e0       	ldi	r25, 0x02	; 2
+     8a2:	68 e3       	ldi	r22, 0x38	; 56
+     8a4:	71 e0       	ldi	r23, 0x01	; 1
+     8a6:	0e 94 05 08 	call	0x100a	; 0x100a <_ZN5Print7printlnEPKc>
+     8aa:	57 c0       	rjmp	.+174    	; 0x95a <__stack+0x5b>
+		return;
+	}
+
+	// Convert string or numbers to integer. String terminated with m (for microseconds).
+	number = input - '0';
+     8ac:	8c 01       	movw	r16, r24
+     8ae:	00 53       	subi	r16, 0x30	; 48
+     8b0:	10 40       	sbci	r17, 0x00	; 0
+     8b2:	12 c0       	rjmp	.+36     	; 0x8d8 <loop+0x82>
+	while ((input = Serial.read()) != 'm') {
+		// Only accept characters 0-9
+		if (input == -1 || input < '0' || input > '9')
+     8b4:	c9 01       	movw	r24, r18
+     8b6:	c0 97       	sbiw	r24, 0x30	; 48
+     8b8:	0a 97       	sbiw	r24, 0x0a	; 10
+     8ba:	70 f4       	brcc	.+28     	; 0x8d8 <loop+0x82>
+			continue;
+
+		number *= 10;
+		number += input - '0';
+     8bc:	c8 01       	movw	r24, r16
+     8be:	53 e0       	ldi	r21, 0x03	; 3
+     8c0:	88 0f       	add	r24, r24
+     8c2:	99 1f       	adc	r25, r25
+     8c4:	5a 95       	dec	r21
+     8c6:	e1 f7       	brne	.-8      	; 0x8c0 <loop+0x6a>
+     8c8:	00 0f       	add	r16, r16
+     8ca:	11 1f       	adc	r17, r17
+     8cc:	08 0f       	add	r16, r24
+     8ce:	19 1f       	adc	r17, r25
+     8d0:	00 53       	subi	r16, 0x30	; 48
+     8d2:	10 40       	sbci	r17, 0x00	; 0
+     8d4:	02 0f       	add	r16, r18
+     8d6:	13 1f       	adc	r17, r19
+		return;
+	}
+
+	// Convert string or numbers to integer. String terminated with m (for microseconds).
+	number = input - '0';
+	while ((input = Serial.read()) != 'm') {
+     8d8:	84 e6       	ldi	r24, 0x64	; 100
+     8da:	92 e0       	ldi	r25, 0x02	; 2
+     8dc:	0e 94 1a 06 	call	0xc34	; 0xc34 <_ZN14HardwareSerial4readEv>
+     8e0:	9c 01       	movw	r18, r24
+     8e2:	8d 36       	cpi	r24, 0x6D	; 109
+     8e4:	91 05       	cpc	r25, r1
+     8e6:	31 f7       	brne	.-52     	; 0x8b4 <loop+0x5e>
+		number *= 10;
+		number += input - '0';
+	}
+
+	// Check for valid motor range
+	if (number < 700 || number > 2000) {
+     8e8:	c8 01       	movw	r24, r16
+     8ea:	8c 5b       	subi	r24, 0xBC	; 188
+     8ec:	92 40       	sbci	r25, 0x02	; 2
+     8ee:	85 51       	subi	r24, 0x15	; 21
+     8f0:	95 40       	sbci	r25, 0x05	; 5
+     8f2:	50 f0       	brcs	.+20     	; 0x908 <__stack+0x9>
+		Serial.print("Invalid motor speed: ");
+     8f4:	84 e6       	ldi	r24, 0x64	; 100
+     8f6:	92 e0       	ldi	r25, 0x02	; 2
+     8f8:	6e e4       	ldi	r22, 0x4E	; 78
+     8fa:	71 e0       	ldi	r23, 0x01	; 1
+     8fc:	0e 94 02 08 	call	0x1004	; 0x1004 <_ZN5Print5printEPKc>
+		Serial.println(number);
+     900:	84 e6       	ldi	r24, 0x64	; 100
+     902:	92 e0       	ldi	r25, 0x02	; 2
+     904:	b8 01       	movw	r22, r16
+     906:	1b c0       	rjmp	.+54     	; 0x93e <__stack+0x3f>
+		return;
+	}
+
+	// wait for motor specification
+	while ((input = Serial.read()) == -1);
+     908:	84 e6       	ldi	r24, 0x64	; 100
+     90a:	92 e0       	ldi	r25, 0x02	; 2
+     90c:	0e 94 1a 06 	call	0xc34	; 0xc34 <_ZN14HardwareSerial4readEv>
+     910:	7c 01       	movw	r14, r24
+     912:	8f ef       	ldi	r24, 0xFF	; 255
+     914:	e8 16       	cp	r14, r24
+     916:	8f ef       	ldi	r24, 0xFF	; 255
+     918:	f8 06       	cpc	r15, r24
+     91a:	b1 f3       	breq	.-20     	; 0x908 <__stack+0x9>
+	if (input != 'a' && (input < '0' || input > '3') ) {
+     91c:	21 e6       	ldi	r18, 0x61	; 97
+     91e:	e2 16       	cp	r14, r18
+     920:	f1 04       	cpc	r15, r1
+     922:	91 f0       	breq	.+36     	; 0x948 <__stack+0x49>
+     924:	c7 01       	movw	r24, r14
+     926:	c0 97       	sbiw	r24, 0x30	; 48
+     928:	04 97       	sbiw	r24, 0x04	; 4
+     92a:	70 f0       	brcs	.+28     	; 0x948 <__stack+0x49>
+		Serial.print("Invalid motor selection");
+     92c:	84 e6       	ldi	r24, 0x64	; 100
+     92e:	92 e0       	ldi	r25, 0x02	; 2
+     930:	64 e6       	ldi	r22, 0x64	; 100
+     932:	71 e0       	ldi	r23, 0x01	; 1
+     934:	0e 94 02 08 	call	0x1004	; 0x1004 <_ZN5Print5printEPKc>
+		Serial.println(input);
+     938:	84 e6       	ldi	r24, 0x64	; 100
+     93a:	92 e0       	ldi	r25, 0x02	; 2
+     93c:	b7 01       	movw	r22, r14
+     93e:	4a e0       	ldi	r20, 0x0A	; 10
+     940:	50 e0       	ldi	r21, 0x00	; 0
+     942:	0e 94 e3 07 	call	0xfc6	; 0xfc6 <_ZN5Print7printlnEii>
+     946:	09 c0       	rjmp	.+18     	; 0x95a <__stack+0x5b>
+		return;
+	}
+
+	// Send command
+	packet.vars.speed = number;
+     948:	1b 83       	std	Y+3, r17	; 0x03
+     94a:	0a 83       	std	Y+2, r16	; 0x02
+	packet.vars.motor = input;
+     94c:	e9 82       	std	Y+1, r14	; 0x01
+	radio_send_wait(&packet, COPTER_ADDR);
+     94e:	ce 01       	movw	r24, r28
+     950:	01 96       	adiw	r24, 0x01	; 1
+     952:	62 e3       	ldi	r22, 0x32	; 50
+     954:	71 e0       	ldi	r23, 0x01	; 1
+     956:	0e 94 c6 03 	call	0x78c	; 0x78c <_Z15radio_send_waitP12radio_packetPc>
+//	if (!radio_recv(1000, &packet)) {
+//		Serial.println("Failed to receive response.");
+//		delay(1000);
+//		return;
+//	}
+}
+     95a:	0f 90       	pop	r0
+     95c:	0f 90       	pop	r0
+     95e:	0f 90       	pop	r0
+     960:	cf 91       	pop	r28
+     962:	df 91       	pop	r29
+     964:	1f 91       	pop	r17
+     966:	0f 91       	pop	r16
+     968:	ff 90       	pop	r15
+     96a:	ef 90       	pop	r14
+     96c:	08 95       	ret
+
+0000096e <setup>:
+// Do not remove the include below
+#include "copter_remote.h"
+
+void setup() {
+     96e:	0f 93       	push	r16
+     970:	1f 93       	push	r17
+	Serial.begin(9600);
+     972:	04 e6       	ldi	r16, 0x64	; 100
+     974:	12 e0       	ldi	r17, 0x02	; 2
+     976:	c8 01       	movw	r24, r16
+     978:	40 e8       	ldi	r20, 0x80	; 128
+     97a:	55 e2       	ldi	r21, 0x25	; 37
+     97c:	60 e0       	ldi	r22, 0x00	; 0
+     97e:	70 e0       	ldi	r23, 0x00	; 0
+     980:	0e 94 63 05 	call	0xac6	; 0xac6 <_ZN14HardwareSerial5beginEm>
+
+	// init radio address, channel, payload size
+	radio_init(BASE_ADDR, RADIO_CHANNEL, RADIO_PAYLOAD);
+     984:	8c e7       	ldi	r24, 0x7C	; 124
+     986:	91 e0       	ldi	r25, 0x01	; 1
+     988:	6c e6       	ldi	r22, 0x6C	; 108
+     98a:	70 e0       	ldi	r23, 0x00	; 0
+     98c:	43 e0       	ldi	r20, 0x03	; 3
+     98e:	50 e0       	ldi	r21, 0x00	; 0
+     990:	0e 94 e7 03 	call	0x7ce	; 0x7ce <_Z10radio_initPcii>
+
+	Serial.println("Beginning ... ");
+     994:	c8 01       	movw	r24, r16
+     996:	62 e8       	ldi	r22, 0x82	; 130
+     998:	71 e0       	ldi	r23, 0x01	; 1
+     99a:	0e 94 05 08 	call	0x100a	; 0x100a <_ZN5Print7printlnEPKc>
+}
+     99e:	1f 91       	pop	r17
+     9a0:	0f 91       	pop	r16
+     9a2:	08 95       	ret
+
+000009a4 <_Z11serialEventv>:
+    !defined(SIG_UART0_RECV) && !defined(USART0_RX_vect) && \
+	!defined(SIG_UART_RECV)
+  #error "Don't know what the Data Received vector is called for the first UART"
+#else
+  void serialEvent() __attribute__((weak));
+  void serialEvent() {}
+     9a4:	08 95       	ret
+
+000009a6 <__vector_18>:
+  #define serialEvent_implemented
+#if defined(USART_RX_vect)
+  SIGNAL(USART_RX_vect)
+     9a6:	1f 92       	push	r1
+     9a8:	0f 92       	push	r0
+     9aa:	0f b6       	in	r0, 0x3f	; 63
+     9ac:	0f 92       	push	r0
+     9ae:	11 24       	eor	r1, r1
+     9b0:	2f 93       	push	r18
+     9b2:	3f 93       	push	r19
+     9b4:	4f 93       	push	r20
+     9b6:	8f 93       	push	r24
+     9b8:	9f 93       	push	r25
+     9ba:	ef 93       	push	r30
+     9bc:	ff 93       	push	r31
+#elif defined(SIG_UART_RECV)
+  SIGNAL(SIG_UART_RECV)
+#endif
+  {
+  #if defined(UDR0)
+    unsigned char c  =  UDR0;
+     9be:	40 91 c6 00 	lds	r20, 0x00C6
+  ring_buffer tx_buffer3  =  { { 0 }, 0, 0 };
+#endif
+
+inline void store_char(unsigned char c, ring_buffer *buffer)
+{
+  int i = (unsigned int)(buffer->head + 1) % SERIAL_BUFFER_SIZE;
+     9c2:	20 91 1c 02 	lds	r18, 0x021C
+     9c6:	30 91 1d 02 	lds	r19, 0x021D
+     9ca:	2f 5f       	subi	r18, 0xFF	; 255
+     9cc:	3f 4f       	sbci	r19, 0xFF	; 255
+     9ce:	2f 73       	andi	r18, 0x3F	; 63
+     9d0:	30 70       	andi	r19, 0x00	; 0
+
+  // if we should be storing the received character into the location
+  // just before the tail (meaning that the head would advance to the
+  // current location of the tail), we're about to overflow the buffer
+  // and so we don't write the character or advance the head.
+  if (i != buffer->tail) {
+     9d2:	80 91 1e 02 	lds	r24, 0x021E
+     9d6:	90 91 1f 02 	lds	r25, 0x021F
+     9da:	28 17       	cp	r18, r24
+     9dc:	39 07       	cpc	r19, r25
+     9de:	59 f0       	breq	.+22     	; 0x9f6 <__vector_18+0x50>
+    buffer->buffer[buffer->head] = c;
+     9e0:	e0 91 1c 02 	lds	r30, 0x021C
+     9e4:	f0 91 1d 02 	lds	r31, 0x021D
+     9e8:	e4 52       	subi	r30, 0x24	; 36
+     9ea:	fe 4f       	sbci	r31, 0xFE	; 254
+     9ec:	40 83       	st	Z, r20
+    buffer->head = i;
+     9ee:	30 93 1d 02 	sts	0x021D, r19
+     9f2:	20 93 1c 02 	sts	0x021C, r18
+    unsigned char c  =  UDR;
+  #else
+    #error UDR not defined
+  #endif
+    store_char(c, &rx_buffer);
+  }
+     9f6:	ff 91       	pop	r31
+     9f8:	ef 91       	pop	r30
+     9fa:	9f 91       	pop	r25
+     9fc:	8f 91       	pop	r24
+     9fe:	4f 91       	pop	r20
+     a00:	3f 91       	pop	r19
+     a02:	2f 91       	pop	r18
+     a04:	0f 90       	pop	r0
+     a06:	0f be       	out	0x3f, r0	; 63
+     a08:	0f 90       	pop	r0
+     a0a:	1f 90       	pop	r1
+     a0c:	18 95       	reti
+
+00000a0e <_Z14serialEventRunv>:
+  _rx_buffer->head = _rx_buffer->tail;
+}
+
+int HardwareSerial::available(void)
+{
+  return (unsigned int)(SERIAL_BUFFER_SIZE + _rx_buffer->head - _rx_buffer->tail) % SERIAL_BUFFER_SIZE;
+     a0e:	e0 91 70 02 	lds	r30, 0x0270
+     a12:	f0 91 71 02 	lds	r31, 0x0271
+     a16:	e0 5c       	subi	r30, 0xC0	; 192
+     a18:	ff 4f       	sbci	r31, 0xFF	; 255
+     a1a:	81 91       	ld	r24, Z+
+     a1c:	91 91       	ld	r25, Z+
+     a1e:	20 81       	ld	r18, Z
+     a20:	31 81       	ldd	r19, Z+1	; 0x01
+#endif
+
+void serialEventRun(void)
+{
+#ifdef serialEvent_implemented
+  if (Serial.available()) serialEvent();
+     a22:	82 1b       	sub	r24, r18
+     a24:	93 0b       	sbc	r25, r19
+     a26:	8f 73       	andi	r24, 0x3F	; 63
+     a28:	90 70       	andi	r25, 0x00	; 0
+     a2a:	89 2b       	or	r24, r25
+     a2c:	11 f0       	breq	.+4      	; 0xa32 <_Z14serialEventRunv+0x24>
+     a2e:	0e 94 d2 04 	call	0x9a4	; 0x9a4 <_Z11serialEventv>
+     a32:	08 95       	ret
+
+00000a34 <__vector_19>:
+#elif defined(UART_UDRE_vect)
+ISR(UART_UDRE_vect)
+#elif defined(USART0_UDRE_vect)
+ISR(USART0_UDRE_vect)
+#elif defined(USART_UDRE_vect)
+ISR(USART_UDRE_vect)
+     a34:	1f 92       	push	r1
+     a36:	0f 92       	push	r0
+     a38:	0f b6       	in	r0, 0x3f	; 63
+     a3a:	0f 92       	push	r0
+     a3c:	11 24       	eor	r1, r1
+     a3e:	2f 93       	push	r18
+     a40:	3f 93       	push	r19
+     a42:	4f 93       	push	r20
+     a44:	5f 93       	push	r21
+     a46:	6f 93       	push	r22
+     a48:	7f 93       	push	r23
+     a4a:	8f 93       	push	r24
+     a4c:	9f 93       	push	r25
+     a4e:	af 93       	push	r26
+     a50:	bf 93       	push	r27
+     a52:	ef 93       	push	r30
+     a54:	ff 93       	push	r31
+#endif
+{
+  if (tx_buffer.head == tx_buffer.tail) {
+     a56:	20 91 60 02 	lds	r18, 0x0260
+     a5a:	30 91 61 02 	lds	r19, 0x0261
+     a5e:	80 91 62 02 	lds	r24, 0x0262
+     a62:	90 91 63 02 	lds	r25, 0x0263
+     a66:	28 17       	cp	r18, r24
+     a68:	39 07       	cpc	r19, r25
+     a6a:	31 f4       	brne	.+12     	; 0xa78 <__vector_19+0x44>
+	// Buffer empty, so disable interrupts
+#if defined(UCSR0B)
+    cbi(UCSR0B, UDRIE0);
+     a6c:	80 91 c1 00 	lds	r24, 0x00C1
+     a70:	8f 7d       	andi	r24, 0xDF	; 223
+     a72:	80 93 c1 00 	sts	0x00C1, r24
+     a76:	16 c0       	rjmp	.+44     	; 0xaa4 <__vector_19+0x70>
+    cbi(UCSRB, UDRIE);
+#endif
+  }
+  else {
+    // There is more data in the output buffer. Send the next byte
+    unsigned char c = tx_buffer.buffer[tx_buffer.tail];
+     a78:	e0 91 62 02 	lds	r30, 0x0262
+     a7c:	f0 91 63 02 	lds	r31, 0x0263
+     a80:	e0 5e       	subi	r30, 0xE0	; 224
+     a82:	fd 4f       	sbci	r31, 0xFD	; 253
+     a84:	40 81       	ld	r20, Z
+    tx_buffer.tail = (tx_buffer.tail + 1) % SERIAL_BUFFER_SIZE;
+     a86:	80 91 62 02 	lds	r24, 0x0262
+     a8a:	90 91 63 02 	lds	r25, 0x0263
+     a8e:	01 96       	adiw	r24, 0x01	; 1
+     a90:	60 e4       	ldi	r22, 0x40	; 64
+     a92:	70 e0       	ldi	r23, 0x00	; 0
+     a94:	0e 94 9c 09 	call	0x1338	; 0x1338 <__divmodhi4>
+     a98:	90 93 63 02 	sts	0x0263, r25
+     a9c:	80 93 62 02 	sts	0x0262, r24
+	
+  #if defined(UDR0)
+    UDR0 = c;
+     aa0:	40 93 c6 00 	sts	0x00C6, r20
+    UDR = c;
+  #else
+    #error UDR not defined
+  #endif
+  }
+}
+     aa4:	ff 91       	pop	r31
+     aa6:	ef 91       	pop	r30
+     aa8:	bf 91       	pop	r27
+     aaa:	af 91       	pop	r26
+     aac:	9f 91       	pop	r25
+     aae:	8f 91       	pop	r24
+     ab0:	7f 91       	pop	r23
+     ab2:	6f 91       	pop	r22
+     ab4:	5f 91       	pop	r21
+     ab6:	4f 91       	pop	r20
+     ab8:	3f 91       	pop	r19
+     aba:	2f 91       	pop	r18
+     abc:	0f 90       	pop	r0
+     abe:	0f be       	out	0x3f, r0	; 63
+     ac0:	0f 90       	pop	r0
+     ac2:	1f 90       	pop	r1
+     ac4:	18 95       	reti
+
+00000ac6 <_ZN14HardwareSerial5beginEm>:
+  _u2x = u2x;
+}
+
+// Public Methods //////////////////////////////////////////////////////////////
+
+void HardwareSerial::begin(unsigned long baud)
+     ac6:	af 92       	push	r10
+     ac8:	bf 92       	push	r11
+     aca:	df 92       	push	r13
+     acc:	ef 92       	push	r14
+     ace:	ff 92       	push	r15
+     ad0:	0f 93       	push	r16
+     ad2:	1f 93       	push	r17
+     ad4:	cf 93       	push	r28
+     ad6:	df 93       	push	r29
+     ad8:	ec 01       	movw	r28, r24
+     ada:	7a 01       	movw	r14, r20
+     adc:	8b 01       	movw	r16, r22
+     ade:	dd 24       	eor	r13, r13
+     ae0:	40 30       	cpi	r20, 0x00	; 0
+     ae2:	81 ee       	ldi	r24, 0xE1	; 225
+     ae4:	58 07       	cpc	r21, r24
+     ae6:	80 e0       	ldi	r24, 0x00	; 0
+     ae8:	68 07       	cpc	r22, r24
+     aea:	80 e0       	ldi	r24, 0x00	; 0
+     aec:	78 07       	cpc	r23, r24
+     aee:	11 f0       	breq	.+4      	; 0xaf4 <_ZN14HardwareSerial5beginEm+0x2e>
+     af0:	dd 24       	eor	r13, r13
+     af2:	d3 94       	inc	r13
+#endif
+
+try_again:
+  
+  if (use_u2x) {
+    *_ucsra = 1 << _u2x;
+     af4:	91 e0       	ldi	r25, 0x01	; 1
+     af6:	a9 2e       	mov	r10, r25
+     af8:	b1 2c       	mov	r11, r1
+     afa:	ec 89       	ldd	r30, Y+20	; 0x14
+     afc:	fd 89       	ldd	r31, Y+21	; 0x15
+  }
+#endif
+
+try_again:
+  
+  if (use_u2x) {
+     afe:	dd 20       	and	r13, r13
+     b00:	69 f0       	breq	.+26     	; 0xb1c <_ZN14HardwareSerial5beginEm+0x56>
+    *_ucsra = 1 << _u2x;
+     b02:	c5 01       	movw	r24, r10
+     b04:	0e 8c       	ldd	r0, Y+30	; 0x1e
+     b06:	02 c0       	rjmp	.+4      	; 0xb0c <_ZN14HardwareSerial5beginEm+0x46>
+     b08:	88 0f       	add	r24, r24
+     b0a:	99 1f       	adc	r25, r25
+     b0c:	0a 94       	dec	r0
+     b0e:	e2 f7       	brpl	.-8      	; 0xb08 <_ZN14HardwareSerial5beginEm+0x42>
+     b10:	80 83       	st	Z, r24
+    baud_setting = (F_CPU / 4 / baud - 1) / 2;
+     b12:	60 e0       	ldi	r22, 0x00	; 0
+     b14:	79 e0       	ldi	r23, 0x09	; 9
+     b16:	8d e3       	ldi	r24, 0x3D	; 61
+     b18:	90 e0       	ldi	r25, 0x00	; 0
+     b1a:	05 c0       	rjmp	.+10     	; 0xb26 <_ZN14HardwareSerial5beginEm+0x60>
+  } else {
+    *_ucsra = 0;
+     b1c:	10 82       	st	Z, r1
+    baud_setting = (F_CPU / 8 / baud - 1) / 2;
+     b1e:	60 e8       	ldi	r22, 0x80	; 128
+     b20:	74 e8       	ldi	r23, 0x84	; 132
+     b22:	8e e1       	ldi	r24, 0x1E	; 30
+     b24:	90 e0       	ldi	r25, 0x00	; 0
+     b26:	a8 01       	movw	r20, r16
+     b28:	97 01       	movw	r18, r14
+     b2a:	0e 94 af 09 	call	0x135e	; 0x135e <__udivmodsi4>
+     b2e:	21 50       	subi	r18, 0x01	; 1
+     b30:	30 40       	sbci	r19, 0x00	; 0
+     b32:	40 40       	sbci	r20, 0x00	; 0
+     b34:	50 40       	sbci	r21, 0x00	; 0
+     b36:	56 95       	lsr	r21
+     b38:	47 95       	ror	r20
+     b3a:	37 95       	ror	r19
+     b3c:	27 95       	ror	r18
+  }
+  
+  if ((baud_setting > 4095) && use_u2x)
+     b3e:	80 e1       	ldi	r24, 0x10	; 16
+     b40:	20 30       	cpi	r18, 0x00	; 0
+     b42:	38 07       	cpc	r19, r24
+     b44:	20 f0       	brcs	.+8      	; 0xb4e <_ZN14HardwareSerial5beginEm+0x88>
+     b46:	dd 20       	and	r13, r13
+     b48:	11 f0       	breq	.+4      	; 0xb4e <_ZN14HardwareSerial5beginEm+0x88>
+     b4a:	dd 24       	eor	r13, r13
+     b4c:	d6 cf       	rjmp	.-84     	; 0xafa <_ZN14HardwareSerial5beginEm+0x34>
+    use_u2x = false;
+    goto try_again;
+  }
+
+  // assign the baud_setting, a.k.a. ubbr (USART Baud Rate Register)
+  *_ubrrh = baud_setting >> 8;
+     b4e:	e8 89       	ldd	r30, Y+16	; 0x10
+     b50:	f9 89       	ldd	r31, Y+17	; 0x11
+     b52:	30 83       	st	Z, r19
+  *_ubrrl = baud_setting;
+     b54:	ea 89       	ldd	r30, Y+18	; 0x12
+     b56:	fb 89       	ldd	r31, Y+19	; 0x13
+     b58:	20 83       	st	Z, r18
+
+  sbi(*_ucsrb, _rxen);
+     b5a:	ee 89       	ldd	r30, Y+22	; 0x16
+     b5c:	ff 89       	ldd	r31, Y+23	; 0x17
+     b5e:	40 81       	ld	r20, Z
+     b60:	21 e0       	ldi	r18, 0x01	; 1
+     b62:	30 e0       	ldi	r19, 0x00	; 0
+     b64:	c9 01       	movw	r24, r18
+     b66:	0a 8c       	ldd	r0, Y+26	; 0x1a
+     b68:	02 c0       	rjmp	.+4      	; 0xb6e <_ZN14HardwareSerial5beginEm+0xa8>
+     b6a:	88 0f       	add	r24, r24
+     b6c:	99 1f       	adc	r25, r25
+     b6e:	0a 94       	dec	r0
+     b70:	e2 f7       	brpl	.-8      	; 0xb6a <_ZN14HardwareSerial5beginEm+0xa4>
+     b72:	48 2b       	or	r20, r24
+     b74:	40 83       	st	Z, r20
+  sbi(*_ucsrb, _txen);
+     b76:	ee 89       	ldd	r30, Y+22	; 0x16
+     b78:	ff 89       	ldd	r31, Y+23	; 0x17
+     b7a:	40 81       	ld	r20, Z
+     b7c:	c9 01       	movw	r24, r18
+     b7e:	0b 8c       	ldd	r0, Y+27	; 0x1b
+     b80:	02 c0       	rjmp	.+4      	; 0xb86 <_ZN14HardwareSerial5beginEm+0xc0>
+     b82:	88 0f       	add	r24, r24
+     b84:	99 1f       	adc	r25, r25
+     b86:	0a 94       	dec	r0
+     b88:	e2 f7       	brpl	.-8      	; 0xb82 <_ZN14HardwareSerial5beginEm+0xbc>
+     b8a:	48 2b       	or	r20, r24
+     b8c:	40 83       	st	Z, r20
+  sbi(*_ucsrb, _rxcie);
+     b8e:	ee 89       	ldd	r30, Y+22	; 0x16
+     b90:	ff 89       	ldd	r31, Y+23	; 0x17
+     b92:	40 81       	ld	r20, Z
+     b94:	c9 01       	movw	r24, r18
+     b96:	0c 8c       	ldd	r0, Y+28	; 0x1c
+     b98:	02 c0       	rjmp	.+4      	; 0xb9e <_ZN14HardwareSerial5beginEm+0xd8>
+     b9a:	88 0f       	add	r24, r24
+     b9c:	99 1f       	adc	r25, r25
+     b9e:	0a 94       	dec	r0
+     ba0:	e2 f7       	brpl	.-8      	; 0xb9a <_ZN14HardwareSerial5beginEm+0xd4>
+     ba2:	48 2b       	or	r20, r24
+     ba4:	40 83       	st	Z, r20
+  cbi(*_ucsrb, _udrie);
+     ba6:	ee 89       	ldd	r30, Y+22	; 0x16
+     ba8:	ff 89       	ldd	r31, Y+23	; 0x17
+     baa:	80 81       	ld	r24, Z
+     bac:	0d 8c       	ldd	r0, Y+29	; 0x1d
+     bae:	02 c0       	rjmp	.+4      	; 0xbb4 <_ZN14HardwareSerial5beginEm+0xee>
+     bb0:	22 0f       	add	r18, r18
+     bb2:	33 1f       	adc	r19, r19
+     bb4:	0a 94       	dec	r0
+     bb6:	e2 f7       	brpl	.-8      	; 0xbb0 <_ZN14HardwareSerial5beginEm+0xea>
+     bb8:	20 95       	com	r18
+     bba:	28 23       	and	r18, r24
+     bbc:	20 83       	st	Z, r18
+}
+     bbe:	df 91       	pop	r29
+     bc0:	cf 91       	pop	r28
+     bc2:	1f 91       	pop	r17
+     bc4:	0f 91       	pop	r16
+     bc6:	ff 90       	pop	r15
+     bc8:	ef 90       	pop	r14
+     bca:	df 90       	pop	r13
+     bcc:	bf 90       	pop	r11
+     bce:	af 90       	pop	r10
+     bd0:	08 95       	ret
+
+00000bd2 <_ZN14HardwareSerial9availableEv>:
+  _rx_buffer->head = _rx_buffer->tail;
+}
+
+int HardwareSerial::available(void)
+{
+  return (unsigned int)(SERIAL_BUFFER_SIZE + _rx_buffer->head - _rx_buffer->tail) % SERIAL_BUFFER_SIZE;
+     bd2:	dc 01       	movw	r26, r24
+     bd4:	1c 96       	adiw	r26, 0x0c	; 12
+     bd6:	ed 91       	ld	r30, X+
+     bd8:	fc 91       	ld	r31, X
+     bda:	1d 97       	sbiw	r26, 0x0d	; 13
+     bdc:	e0 5c       	subi	r30, 0xC0	; 192
+     bde:	ff 4f       	sbci	r31, 0xFF	; 255
+     be0:	21 91       	ld	r18, Z+
+     be2:	31 91       	ld	r19, Z+
+     be4:	80 81       	ld	r24, Z
+     be6:	91 81       	ldd	r25, Z+1	; 0x01
+     be8:	28 1b       	sub	r18, r24
+     bea:	39 0b       	sbc	r19, r25
+     bec:	2f 73       	andi	r18, 0x3F	; 63
+     bee:	30 70       	andi	r19, 0x00	; 0
+}
+     bf0:	c9 01       	movw	r24, r18
+     bf2:	08 95       	ret
+
+00000bf4 <_ZN14HardwareSerial4peekEv>:
+
+int HardwareSerial::peek(void)
+{
+  if (_rx_buffer->head == _rx_buffer->tail) {
+     bf4:	dc 01       	movw	r26, r24
+     bf6:	1c 96       	adiw	r26, 0x0c	; 12
+     bf8:	ed 91       	ld	r30, X+
+     bfa:	fc 91       	ld	r31, X
+     bfc:	1d 97       	sbiw	r26, 0x0d	; 13
+     bfe:	e0 5c       	subi	r30, 0xC0	; 192
+     c00:	ff 4f       	sbci	r31, 0xFF	; 255
+     c02:	20 81       	ld	r18, Z
+     c04:	31 81       	ldd	r19, Z+1	; 0x01
+     c06:	e0 54       	subi	r30, 0x40	; 64
+     c08:	f0 40       	sbci	r31, 0x00	; 0
+     c0a:	df 01       	movw	r26, r30
+     c0c:	ae 5b       	subi	r26, 0xBE	; 190
+     c0e:	bf 4f       	sbci	r27, 0xFF	; 255
+     c10:	8d 91       	ld	r24, X+
+     c12:	9c 91       	ld	r25, X
+     c14:	11 97       	sbiw	r26, 0x01	; 1
+     c16:	28 17       	cp	r18, r24
+     c18:	39 07       	cpc	r19, r25
+     c1a:	19 f4       	brne	.+6      	; 0xc22 <_ZN14HardwareSerial4peekEv+0x2e>
+     c1c:	2f ef       	ldi	r18, 0xFF	; 255
+     c1e:	3f ef       	ldi	r19, 0xFF	; 255
+     c20:	07 c0       	rjmp	.+14     	; 0xc30 <_ZN14HardwareSerial4peekEv+0x3c>
+    return -1;
+  } else {
+    return _rx_buffer->buffer[_rx_buffer->tail];
+     c22:	8d 91       	ld	r24, X+
+     c24:	9c 91       	ld	r25, X
+     c26:	e8 0f       	add	r30, r24
+     c28:	f9 1f       	adc	r31, r25
+     c2a:	80 81       	ld	r24, Z
+     c2c:	28 2f       	mov	r18, r24
+     c2e:	30 e0       	ldi	r19, 0x00	; 0
+  }
+}
+     c30:	c9 01       	movw	r24, r18
+     c32:	08 95       	ret
+
+00000c34 <_ZN14HardwareSerial4readEv>:
+
+int HardwareSerial::read(void)
+{
+  // if the head isn't ahead of the tail, we don't have any characters
+  if (_rx_buffer->head == _rx_buffer->tail) {
+     c34:	dc 01       	movw	r26, r24
+     c36:	1c 96       	adiw	r26, 0x0c	; 12
+     c38:	ed 91       	ld	r30, X+
+     c3a:	fc 91       	ld	r31, X
+     c3c:	1d 97       	sbiw	r26, 0x0d	; 13
+     c3e:	e0 5c       	subi	r30, 0xC0	; 192
+     c40:	ff 4f       	sbci	r31, 0xFF	; 255
+     c42:	20 81       	ld	r18, Z
+     c44:	31 81       	ldd	r19, Z+1	; 0x01
+     c46:	e0 54       	subi	r30, 0x40	; 64
+     c48:	f0 40       	sbci	r31, 0x00	; 0
+     c4a:	df 01       	movw	r26, r30
+     c4c:	ae 5b       	subi	r26, 0xBE	; 190
+     c4e:	bf 4f       	sbci	r27, 0xFF	; 255
+     c50:	8d 91       	ld	r24, X+
+     c52:	9c 91       	ld	r25, X
+     c54:	11 97       	sbiw	r26, 0x01	; 1
+     c56:	28 17       	cp	r18, r24
+     c58:	39 07       	cpc	r19, r25
+     c5a:	19 f4       	brne	.+6      	; 0xc62 <_ZN14HardwareSerial4readEv+0x2e>
+     c5c:	2f ef       	ldi	r18, 0xFF	; 255
+     c5e:	3f ef       	ldi	r19, 0xFF	; 255
+     c60:	10 c0       	rjmp	.+32     	; 0xc82 <_ZN14HardwareSerial4readEv+0x4e>
+    return -1;
+  } else {
+    unsigned char c = _rx_buffer->buffer[_rx_buffer->tail];
+     c62:	8d 91       	ld	r24, X+
+     c64:	9c 91       	ld	r25, X
+     c66:	11 97       	sbiw	r26, 0x01	; 1
+     c68:	e8 0f       	add	r30, r24
+     c6a:	f9 1f       	adc	r31, r25
+     c6c:	20 81       	ld	r18, Z
+    _rx_buffer->tail = (unsigned int)(_rx_buffer->tail + 1) % SERIAL_BUFFER_SIZE;
+     c6e:	8d 91       	ld	r24, X+
+     c70:	9c 91       	ld	r25, X
+     c72:	11 97       	sbiw	r26, 0x01	; 1
+     c74:	01 96       	adiw	r24, 0x01	; 1
+     c76:	8f 73       	andi	r24, 0x3F	; 63
+     c78:	90 70       	andi	r25, 0x00	; 0
+     c7a:	11 96       	adiw	r26, 0x01	; 1
+     c7c:	9c 93       	st	X, r25
+     c7e:	8e 93       	st	-X, r24
+    return c;
+     c80:	30 e0       	ldi	r19, 0x00	; 0
+  }
+}
+     c82:	c9 01       	movw	r24, r18
+     c84:	08 95       	ret
+
+00000c86 <_ZN14HardwareSerial5flushEv>:
+
+void HardwareSerial::flush()
+{
+  while (_tx_buffer->head != _tx_buffer->tail)
+     c86:	fc 01       	movw	r30, r24
+     c88:	86 85       	ldd	r24, Z+14	; 0x0e
+     c8a:	97 85       	ldd	r25, Z+15	; 0x0f
+     c8c:	dc 01       	movw	r26, r24
+     c8e:	a0 5c       	subi	r26, 0xC0	; 192
+     c90:	bf 4f       	sbci	r27, 0xFF	; 255
+     c92:	fc 01       	movw	r30, r24
+     c94:	ee 5b       	subi	r30, 0xBE	; 190
+     c96:	ff 4f       	sbci	r31, 0xFF	; 255
+     c98:	2d 91       	ld	r18, X+
+     c9a:	3c 91       	ld	r19, X
+     c9c:	11 97       	sbiw	r26, 0x01	; 1
+     c9e:	80 81       	ld	r24, Z
+     ca0:	91 81       	ldd	r25, Z+1	; 0x01
+     ca2:	28 17       	cp	r18, r24
+     ca4:	39 07       	cpc	r19, r25
+     ca6:	c1 f7       	brne	.-16     	; 0xc98 <_ZN14HardwareSerial5flushEv+0x12>
+    ;
+}
+     ca8:	08 95       	ret
+
+00000caa <_ZN14HardwareSerial5writeEh>:
+
+size_t HardwareSerial::write(uint8_t c)
+     caa:	cf 93       	push	r28
+     cac:	df 93       	push	r29
+     cae:	ec 01       	movw	r28, r24
+     cb0:	46 2f       	mov	r20, r22
+{
+  int i = (_tx_buffer->head + 1) % SERIAL_BUFFER_SIZE;
+     cb2:	ee 85       	ldd	r30, Y+14	; 0x0e
+     cb4:	ff 85       	ldd	r31, Y+15	; 0x0f
+     cb6:	e0 5c       	subi	r30, 0xC0	; 192
+     cb8:	ff 4f       	sbci	r31, 0xFF	; 255
+     cba:	80 81       	ld	r24, Z
+     cbc:	91 81       	ldd	r25, Z+1	; 0x01
+     cbe:	e0 54       	subi	r30, 0x40	; 64
+     cc0:	f0 40       	sbci	r31, 0x00	; 0
+     cc2:	01 96       	adiw	r24, 0x01	; 1
+     cc4:	60 e4       	ldi	r22, 0x40	; 64
+     cc6:	70 e0       	ldi	r23, 0x00	; 0
+     cc8:	0e 94 9c 09 	call	0x1338	; 0x1338 <__divmodhi4>
+     ccc:	9c 01       	movw	r18, r24
+	
+  // If the output buffer is full, there's nothing for it other than to 
+  // wait for the interrupt handler to empty it a bit
+  // ???: return 0 here instead?
+  while (i == _tx_buffer->tail)
+     cce:	df 01       	movw	r26, r30
+     cd0:	ae 5b       	subi	r26, 0xBE	; 190
+     cd2:	bf 4f       	sbci	r27, 0xFF	; 255
+     cd4:	8d 91       	ld	r24, X+
+     cd6:	9c 91       	ld	r25, X
+     cd8:	11 97       	sbiw	r26, 0x01	; 1
+     cda:	28 17       	cp	r18, r24
+     cdc:	39 07       	cpc	r19, r25
+     cde:	d1 f3       	breq	.-12     	; 0xcd4 <_ZN14HardwareSerial5writeEh+0x2a>
+    ;
+	
+  _tx_buffer->buffer[_tx_buffer->head] = c;
+     ce0:	e0 5c       	subi	r30, 0xC0	; 192
+     ce2:	ff 4f       	sbci	r31, 0xFF	; 255
+     ce4:	80 81       	ld	r24, Z
+     ce6:	91 81       	ldd	r25, Z+1	; 0x01
+     ce8:	e0 54       	subi	r30, 0x40	; 64
+     cea:	f0 40       	sbci	r31, 0x00	; 0
+     cec:	e8 0f       	add	r30, r24
+     cee:	f9 1f       	adc	r31, r25
+     cf0:	40 83       	st	Z, r20
+  _tx_buffer->head = i;
+     cf2:	ee 85       	ldd	r30, Y+14	; 0x0e
+     cf4:	ff 85       	ldd	r31, Y+15	; 0x0f
+     cf6:	e0 5c       	subi	r30, 0xC0	; 192
+     cf8:	ff 4f       	sbci	r31, 0xFF	; 255
+     cfa:	31 83       	std	Z+1, r19	; 0x01
+     cfc:	20 83       	st	Z, r18
+	
+  sbi(*_ucsrb, _udrie);
+     cfe:	ee 89       	ldd	r30, Y+22	; 0x16
+     d00:	ff 89       	ldd	r31, Y+23	; 0x17
+     d02:	20 81       	ld	r18, Z
+     d04:	81 e0       	ldi	r24, 0x01	; 1
+     d06:	90 e0       	ldi	r25, 0x00	; 0
+     d08:	0d 8c       	ldd	r0, Y+29	; 0x1d
+     d0a:	02 c0       	rjmp	.+4      	; 0xd10 <_ZN14HardwareSerial5writeEh+0x66>
+     d0c:	88 0f       	add	r24, r24
+     d0e:	99 1f       	adc	r25, r25
+     d10:	0a 94       	dec	r0
+     d12:	e2 f7       	brpl	.-8      	; 0xd0c <_ZN14HardwareSerial5writeEh+0x62>
+     d14:	28 2b       	or	r18, r24
+     d16:	20 83       	st	Z, r18
+  
+  return 1;
+}
+     d18:	81 e0       	ldi	r24, 0x01	; 1
+     d1a:	90 e0       	ldi	r25, 0x00	; 0
+     d1c:	df 91       	pop	r29
+     d1e:	cf 91       	pop	r28
+     d20:	08 95       	ret
+
+00000d22 <_GLOBAL__I_rx_buffer>:
+    size_t printNumber(unsigned long, uint8_t);
+    size_t printFloat(double, uint8_t);
+  protected:
+    void setWriteError(int err = 1) { write_error = err; }
+  public:
+    Print() : write_error(0) {}
+     d22:	10 92 67 02 	sts	0x0267, r1
+     d26:	10 92 66 02 	sts	0x0266, r1
+    virtual int available() = 0;
+    virtual int read() = 0;
+    virtual int peek() = 0;
+    virtual void flush() = 0;
+
+    Stream() {_timeout=1000;}
+     d2a:	88 ee       	ldi	r24, 0xE8	; 232
+     d2c:	93 e0       	ldi	r25, 0x03	; 3
+     d2e:	a0 e0       	ldi	r26, 0x00	; 0
+     d30:	b0 e0       	ldi	r27, 0x00	; 0
+     d32:	80 93 68 02 	sts	0x0268, r24
+     d36:	90 93 69 02 	sts	0x0269, r25
+     d3a:	a0 93 6a 02 	sts	0x026A, r26
+     d3e:	b0 93 6b 02 	sts	0x026B, r27
+
+HardwareSerial::HardwareSerial(ring_buffer *rx_buffer, ring_buffer *tx_buffer,
+  volatile uint8_t *ubrrh, volatile uint8_t *ubrrl,
+  volatile uint8_t *ucsra, volatile uint8_t *ucsrb,
+  volatile uint8_t *udr,
+  uint8_t rxen, uint8_t txen, uint8_t rxcie, uint8_t udrie, uint8_t u2x)
+     d42:	8f e9       	ldi	r24, 0x9F	; 159
+     d44:	91 e0       	ldi	r25, 0x01	; 1
+     d46:	90 93 65 02 	sts	0x0265, r25
+     d4a:	80 93 64 02 	sts	0x0264, r24
+{
+  _rx_buffer = rx_buffer;
+     d4e:	8c ed       	ldi	r24, 0xDC	; 220
+     d50:	91 e0       	ldi	r25, 0x01	; 1
+     d52:	90 93 71 02 	sts	0x0271, r25
+     d56:	80 93 70 02 	sts	0x0270, r24
+  _tx_buffer = tx_buffer;
+     d5a:	80 e2       	ldi	r24, 0x20	; 32
+     d5c:	92 e0       	ldi	r25, 0x02	; 2
+     d5e:	90 93 73 02 	sts	0x0273, r25
+     d62:	80 93 72 02 	sts	0x0272, r24
+  _ubrrh = ubrrh;
+     d66:	85 ec       	ldi	r24, 0xC5	; 197
+     d68:	90 e0       	ldi	r25, 0x00	; 0
+     d6a:	90 93 75 02 	sts	0x0275, r25
+     d6e:	80 93 74 02 	sts	0x0274, r24
+  _ubrrl = ubrrl;
+     d72:	84 ec       	ldi	r24, 0xC4	; 196
+     d74:	90 e0       	ldi	r25, 0x00	; 0
+     d76:	90 93 77 02 	sts	0x0277, r25
+     d7a:	80 93 76 02 	sts	0x0276, r24
+  _ucsra = ucsra;
+     d7e:	80 ec       	ldi	r24, 0xC0	; 192
+     d80:	90 e0       	ldi	r25, 0x00	; 0
+     d82:	90 93 79 02 	sts	0x0279, r25
+     d86:	80 93 78 02 	sts	0x0278, r24
+  _ucsrb = ucsrb;
+     d8a:	81 ec       	ldi	r24, 0xC1	; 193
+     d8c:	90 e0       	ldi	r25, 0x00	; 0
+     d8e:	90 93 7b 02 	sts	0x027B, r25
+     d92:	80 93 7a 02 	sts	0x027A, r24
+  _udr = udr;
+     d96:	86 ec       	ldi	r24, 0xC6	; 198
+     d98:	90 e0       	ldi	r25, 0x00	; 0
+     d9a:	90 93 7d 02 	sts	0x027D, r25
+     d9e:	80 93 7c 02 	sts	0x027C, r24
+  _rxen = rxen;
+     da2:	84 e0       	ldi	r24, 0x04	; 4
+     da4:	80 93 7e 02 	sts	0x027E, r24
+  _txen = txen;
+     da8:	83 e0       	ldi	r24, 0x03	; 3
+     daa:	80 93 7f 02 	sts	0x027F, r24
+  _rxcie = rxcie;
+     dae:	87 e0       	ldi	r24, 0x07	; 7
+     db0:	80 93 80 02 	sts	0x0280, r24
+  _udrie = udrie;
+     db4:	85 e0       	ldi	r24, 0x05	; 5
+     db6:	80 93 81 02 	sts	0x0281, r24
+  _u2x = u2x;
+     dba:	81 e0       	ldi	r24, 0x01	; 1
+     dbc:	80 93 82 02 	sts	0x0282, r24
+// Preinstantiate Objects //////////////////////////////////////////////////////
+
+#if defined(UBRRH) && defined(UBRRL)
+  HardwareSerial Serial(&rx_buffer, &tx_buffer, &UBRRH, &UBRRL, &UCSRA, &UCSRB, &UDR, RXEN, TXEN, RXCIE, UDRIE, U2X);
+#elif defined(UBRR0H) && defined(UBRR0L)
+  HardwareSerial Serial(&rx_buffer, &tx_buffer, &UBRR0H, &UBRR0L, &UCSR0A, &UCSR0B, &UDR0, RXEN0, TXEN0, RXCIE0, UDRIE0, U2X0);
+     dc0:	08 95       	ret
+
+00000dc2 <_ZN5Print5writeEPKhj>:
+#include "Print.h"
+
+// Public Methods //////////////////////////////////////////////////////////////
+
+/* default implementation: may be overridden */
+size_t Print::write(const uint8_t *buffer, size_t size)
+     dc2:	cf 92       	push	r12
+     dc4:	df 92       	push	r13
+     dc6:	ef 92       	push	r14
+     dc8:	ff 92       	push	r15
+     dca:	0f 93       	push	r16
+     dcc:	1f 93       	push	r17
+     dce:	cf 93       	push	r28
+     dd0:	df 93       	push	r29
+     dd2:	7c 01       	movw	r14, r24
+     dd4:	6b 01       	movw	r12, r22
+     dd6:	8a 01       	movw	r16, r20
+     dd8:	c0 e0       	ldi	r28, 0x00	; 0
+     dda:	d0 e0       	ldi	r29, 0x00	; 0
+     ddc:	0f c0       	rjmp	.+30     	; 0xdfc <_ZN5Print5writeEPKhj+0x3a>
+{
+  size_t n = 0;
+  while (size--) {
+    n += write(*buffer++);
+     dde:	d6 01       	movw	r26, r12
+     de0:	6d 91       	ld	r22, X+
+     de2:	6d 01       	movw	r12, r26
+     de4:	d7 01       	movw	r26, r14
+     de6:	ed 91       	ld	r30, X+
+     de8:	fc 91       	ld	r31, X
+     dea:	01 90       	ld	r0, Z+
+     dec:	f0 81       	ld	r31, Z
+     dee:	e0 2d       	mov	r30, r0
+     df0:	c7 01       	movw	r24, r14
+     df2:	09 95       	icall
+     df4:	c8 0f       	add	r28, r24
+     df6:	d9 1f       	adc	r29, r25
+     df8:	01 50       	subi	r16, 0x01	; 1
+     dfa:	10 40       	sbci	r17, 0x00	; 0
+
+/* default implementation: may be overridden */
+size_t Print::write(const uint8_t *buffer, size_t size)
+{
+  size_t n = 0;
+  while (size--) {
+     dfc:	01 15       	cp	r16, r1
+     dfe:	11 05       	cpc	r17, r1
+     e00:	71 f7       	brne	.-36     	; 0xdde <_ZN5Print5writeEPKhj+0x1c>
+    n += write(*buffer++);
+  }
+  return n;
+}
+     e02:	ce 01       	movw	r24, r28
+     e04:	df 91       	pop	r29
+     e06:	cf 91       	pop	r28
+     e08:	1f 91       	pop	r17
+     e0a:	0f 91       	pop	r16
+     e0c:	ff 90       	pop	r15
+     e0e:	ef 90       	pop	r14
+     e10:	df 90       	pop	r13
+     e12:	cf 90       	pop	r12
+     e14:	08 95       	ret
+
+00000e16 <_ZN5Print7printlnEv>:
+size_t Print::print(const Printable& x)
+{
+  return x.printTo(*this);
+}
+
+size_t Print::println(void)
+     e16:	ef 92       	push	r14
+     e18:	ff 92       	push	r15
+     e1a:	0f 93       	push	r16
+     e1c:	1f 93       	push	r17
+     e1e:	8c 01       	movw	r16, r24
+  return write(str);
+}
+
+size_t Print::print(char c)
+{
+  return write(c);
+     e20:	dc 01       	movw	r26, r24
+     e22:	ed 91       	ld	r30, X+
+     e24:	fc 91       	ld	r31, X
+     e26:	01 90       	ld	r0, Z+
+     e28:	f0 81       	ld	r31, Z
+     e2a:	e0 2d       	mov	r30, r0
+     e2c:	6d e0       	ldi	r22, 0x0D	; 13
+     e2e:	09 95       	icall
+     e30:	7c 01       	movw	r14, r24
+size_t Print::println(void)
+{
+  size_t n = print('\r');
+  n += print('\n');
+  return n;
+}
+     e32:	d8 01       	movw	r26, r16
+     e34:	ed 91       	ld	r30, X+
+     e36:	fc 91       	ld	r31, X
+     e38:	01 90       	ld	r0, Z+
+     e3a:	f0 81       	ld	r31, Z
+     e3c:	e0 2d       	mov	r30, r0
+     e3e:	c8 01       	movw	r24, r16
+     e40:	6a e0       	ldi	r22, 0x0A	; 10
+     e42:	09 95       	icall
+     e44:	9c 01       	movw	r18, r24
+     e46:	2e 0d       	add	r18, r14
+     e48:	3f 1d       	adc	r19, r15
+     e4a:	c9 01       	movw	r24, r18
+     e4c:	1f 91       	pop	r17
+     e4e:	0f 91       	pop	r16
+     e50:	ff 90       	pop	r15
+     e52:	ef 90       	pop	r14
+     e54:	08 95       	ret
+
+00000e56 <_ZN5Print5writeEPKc>:
+  
+    int getWriteError() { return write_error; }
+    void clearWriteError() { setWriteError(0); }
+  
+    virtual size_t write(uint8_t) = 0;
+    size_t write(const char *str) { return write((const uint8_t *)str, strlen(str)); }
+     e56:	cf 93       	push	r28
+     e58:	df 93       	push	r29
+     e5a:	db 01       	movw	r26, r22
+     e5c:	0d 90       	ld	r0, X+
+     e5e:	00 20       	and	r0, r0
+     e60:	e9 f7       	brne	.-6      	; 0xe5c <_ZN5Print5writeEPKc+0x6>
+     e62:	11 97       	sbiw	r26, 0x01	; 1
+     e64:	a6 1b       	sub	r26, r22
+     e66:	b7 0b       	sbc	r27, r23
+     e68:	ec 01       	movw	r28, r24
+     e6a:	e8 81       	ld	r30, Y
+     e6c:	f9 81       	ldd	r31, Y+1	; 0x01
+     e6e:	02 80       	ldd	r0, Z+2	; 0x02
+     e70:	f3 81       	ldd	r31, Z+3	; 0x03
+     e72:	e0 2d       	mov	r30, r0
+     e74:	ad 01       	movw	r20, r26
+     e76:	09 95       	icall
+     e78:	df 91       	pop	r29
+     e7a:	cf 91       	pop	r28
+     e7c:	08 95       	ret
+
+00000e7e <_ZN5Print11printNumberEmh>:
+  return n;
+}
+
+// Private Methods /////////////////////////////////////////////////////////////
+
+size_t Print::printNumber(unsigned long n, uint8_t base) {
+     e7e:	4f 92       	push	r4
+     e80:	5f 92       	push	r5
+     e82:	7f 92       	push	r7
+     e84:	8f 92       	push	r8
+     e86:	9f 92       	push	r9
+     e88:	af 92       	push	r10
+     e8a:	bf 92       	push	r11
+     e8c:	cf 92       	push	r12
+     e8e:	df 92       	push	r13
+     e90:	ef 92       	push	r14
+     e92:	ff 92       	push	r15
+     e94:	0f 93       	push	r16
+     e96:	1f 93       	push	r17
+     e98:	df 93       	push	r29
+     e9a:	cf 93       	push	r28
+     e9c:	cd b7       	in	r28, 0x3d	; 61
+     e9e:	de b7       	in	r29, 0x3e	; 62
+     ea0:	a1 97       	sbiw	r28, 0x21	; 33
+     ea2:	0f b6       	in	r0, 0x3f	; 63
+     ea4:	f8 94       	cli
+     ea6:	de bf       	out	0x3e, r29	; 62
+     ea8:	0f be       	out	0x3f, r0	; 63
+     eaa:	cd bf       	out	0x3d, r28	; 61
+     eac:	2c 01       	movw	r4, r24
+     eae:	74 2e       	mov	r7, r20
+     eb0:	cb 01       	movw	r24, r22
+  char *str = &buf[sizeof(buf) - 1];
+
+  *str = '\0';
+
+  // prevent crash if called with base == 1
+  if (base < 2) base = 10;
+     eb2:	22 30       	cpi	r18, 0x02	; 2
+     eb4:	08 f4       	brcc	.+2      	; 0xeb8 <_ZN5Print11printNumberEmh+0x3a>
+     eb6:	2a e0       	ldi	r18, 0x0A	; 10
+
+size_t Print::printNumber(unsigned long n, uint8_t base) {
+  char buf[8 * sizeof(long) + 1]; // Assumes 8-bit chars plus zero byte.
+  char *str = &buf[sizeof(buf) - 1];
+
+  *str = '\0';
+     eb8:	19 a2       	std	Y+33, r1	; 0x21
+     eba:	31 e2       	ldi	r19, 0x21	; 33
+     ebc:	c3 2e       	mov	r12, r19
+     ebe:	d1 2c       	mov	r13, r1
+     ec0:	cc 0e       	add	r12, r28
+     ec2:	dd 1e       	adc	r13, r29
+  // prevent crash if called with base == 1
+  if (base < 2) base = 10;
+
+  do {
+    unsigned long m = n;
+    n /= base;
+     ec4:	82 2e       	mov	r8, r18
+     ec6:	99 24       	eor	r9, r9
+     ec8:	aa 24       	eor	r10, r10
+     eca:	bb 24       	eor	r11, r11
+     ecc:	67 2d       	mov	r22, r7
+     ece:	75 2f       	mov	r23, r21
+     ed0:	a5 01       	movw	r20, r10
+     ed2:	94 01       	movw	r18, r8
+     ed4:	0e 94 af 09 	call	0x135e	; 0x135e <__udivmodsi4>
+     ed8:	79 01       	movw	r14, r18
+     eda:	8a 01       	movw	r16, r20
+    char c = m - base * n;
+     edc:	c8 01       	movw	r24, r16
+     ede:	b7 01       	movw	r22, r14
+     ee0:	a5 01       	movw	r20, r10
+     ee2:	94 01       	movw	r18, r8
+     ee4:	0e 94 7d 09 	call	0x12fa	; 0x12fa <__mulsi3>
+     ee8:	47 2d       	mov	r20, r7
+     eea:	46 1b       	sub	r20, r22
+    *--str = c < 10 ? c + '0' : c + 'A' - 10;
+     eec:	08 94       	sec
+     eee:	c1 08       	sbc	r12, r1
+     ef0:	d1 08       	sbc	r13, r1
+     ef2:	4a 30       	cpi	r20, 0x0A	; 10
+     ef4:	14 f4       	brge	.+4      	; 0xefa <_ZN5Print11printNumberEmh+0x7c>
+     ef6:	40 5d       	subi	r20, 0xD0	; 208
+     ef8:	01 c0       	rjmp	.+2      	; 0xefc <_ZN5Print11printNumberEmh+0x7e>
+     efa:	49 5c       	subi	r20, 0xC9	; 201
+     efc:	f6 01       	movw	r30, r12
+     efe:	40 83       	st	Z, r20
+  *str = '\0';
+
+  // prevent crash if called with base == 1
+  if (base < 2) base = 10;
+
+  do {
+     f00:	e1 14       	cp	r14, r1
+     f02:	f1 04       	cpc	r15, r1
+     f04:	01 05       	cpc	r16, r1
+     f06:	11 05       	cpc	r17, r1
+     f08:	21 f0       	breq	.+8      	; 0xf12 <_ZN5Print11printNumberEmh+0x94>
+     f0a:	7e 2c       	mov	r7, r14
+     f0c:	5f 2d       	mov	r21, r15
+     f0e:	c8 01       	movw	r24, r16
+     f10:	dd cf       	rjmp	.-70     	; 0xecc <_ZN5Print11printNumberEmh+0x4e>
+    n /= base;
+    char c = m - base * n;
+    *--str = c < 10 ? c + '0' : c + 'A' - 10;
+  } while(n);
+
+  return write(str);
+     f12:	c2 01       	movw	r24, r4
+     f14:	b6 01       	movw	r22, r12
+     f16:	0e 94 2b 07 	call	0xe56	; 0xe56 <_ZN5Print5writeEPKc>
+}
+     f1a:	a1 96       	adiw	r28, 0x21	; 33
+     f1c:	0f b6       	in	r0, 0x3f	; 63
+     f1e:	f8 94       	cli
+     f20:	de bf       	out	0x3e, r29	; 62
+     f22:	0f be       	out	0x3f, r0	; 63
+     f24:	cd bf       	out	0x3d, r28	; 61
+     f26:	cf 91       	pop	r28
+     f28:	df 91       	pop	r29
+     f2a:	1f 91       	pop	r17
+     f2c:	0f 91       	pop	r16
+     f2e:	ff 90       	pop	r15
+     f30:	ef 90       	pop	r14
+     f32:	df 90       	pop	r13
+     f34:	cf 90       	pop	r12
+     f36:	bf 90       	pop	r11
+     f38:	af 90       	pop	r10
+     f3a:	9f 90       	pop	r9
+     f3c:	8f 90       	pop	r8
+     f3e:	7f 90       	pop	r7
+     f40:	5f 90       	pop	r5
+     f42:	4f 90       	pop	r4
+     f44:	08 95       	ret
+
+00000f46 <_ZN5Print5printEli>:
+size_t Print::print(unsigned int n, int base)
+{
+  return print((unsigned long) n, base);
+}
+
+size_t Print::print(long n, int base)
+     f46:	cf 92       	push	r12
+     f48:	df 92       	push	r13
+     f4a:	ef 92       	push	r14
+     f4c:	ff 92       	push	r15
+     f4e:	0f 93       	push	r16
+     f50:	1f 93       	push	r17
+     f52:	cf 93       	push	r28
+     f54:	df 93       	push	r29
+     f56:	ec 01       	movw	r28, r24
+     f58:	6a 01       	movw	r12, r20
+     f5a:	7b 01       	movw	r14, r22
+{
+  if (base == 0) {
+     f5c:	21 15       	cp	r18, r1
+     f5e:	31 05       	cpc	r19, r1
+     f60:	41 f4       	brne	.+16     	; 0xf72 <_ZN5Print5printEli+0x2c>
+    return write(n);
+     f62:	e8 81       	ld	r30, Y
+     f64:	f9 81       	ldd	r31, Y+1	; 0x01
+     f66:	01 90       	ld	r0, Z+
+     f68:	f0 81       	ld	r31, Z
+     f6a:	e0 2d       	mov	r30, r0
+     f6c:	64 2f       	mov	r22, r20
+     f6e:	09 95       	icall
+     f70:	1f c0       	rjmp	.+62     	; 0xfb0 <_ZN5Print5printEli+0x6a>
+  } else if (base == 10) {
+     f72:	2a 30       	cpi	r18, 0x0A	; 10
+     f74:	31 05       	cpc	r19, r1
+     f76:	d1 f4       	brne	.+52     	; 0xfac <_ZN5Print5printEli+0x66>
+    if (n < 0) {
+     f78:	77 ff       	sbrs	r23, 7
+     f7a:	17 c0       	rjmp	.+46     	; 0xfaa <_ZN5Print5printEli+0x64>
+  return write(str);
+}
+
+size_t Print::print(char c)
+{
+  return write(c);
+     f7c:	e8 81       	ld	r30, Y
+     f7e:	f9 81       	ldd	r31, Y+1	; 0x01
+     f80:	01 90       	ld	r0, Z+
+     f82:	f0 81       	ld	r31, Z
+     f84:	e0 2d       	mov	r30, r0
+     f86:	6d e2       	ldi	r22, 0x2D	; 45
+     f88:	09 95       	icall
+     f8a:	8c 01       	movw	r16, r24
+    return write(n);
+  } else if (base == 10) {
+    if (n < 0) {
+      int t = print('-');
+      n = -n;
+      return printNumber(n, 10) + t;
+     f8c:	44 27       	eor	r20, r20
+     f8e:	55 27       	eor	r21, r21
+     f90:	ba 01       	movw	r22, r20
+     f92:	4c 19       	sub	r20, r12
+     f94:	5d 09       	sbc	r21, r13
+     f96:	6e 09       	sbc	r22, r14
+     f98:	7f 09       	sbc	r23, r15
+     f9a:	ce 01       	movw	r24, r28
+     f9c:	2a e0       	ldi	r18, 0x0A	; 10
+     f9e:	0e 94 3f 07 	call	0xe7e	; 0xe7e <_ZN5Print11printNumberEmh>
+     fa2:	98 01       	movw	r18, r16
+     fa4:	28 0f       	add	r18, r24
+     fa6:	39 1f       	adc	r19, r25
+     fa8:	04 c0       	rjmp	.+8      	; 0xfb2 <_ZN5Print5printEli+0x6c>
+    }
+    return printNumber(n, 10);
+     faa:	2a e0       	ldi	r18, 0x0A	; 10
+  } else {
+    return printNumber(n, base);
+     fac:	0e 94 3f 07 	call	0xe7e	; 0xe7e <_ZN5Print11printNumberEmh>
+     fb0:	9c 01       	movw	r18, r24
+  }
+}
+     fb2:	c9 01       	movw	r24, r18
+     fb4:	df 91       	pop	r29
+     fb6:	cf 91       	pop	r28
+     fb8:	1f 91       	pop	r17
+     fba:	0f 91       	pop	r16
+     fbc:	ff 90       	pop	r15
+     fbe:	ef 90       	pop	r14
+     fc0:	df 90       	pop	r13
+     fc2:	cf 90       	pop	r12
+     fc4:	08 95       	ret
+
+00000fc6 <_ZN5Print7printlnEii>:
+  size_t n = print(b, base);
+  n += println();
+  return n;
+}
+
+size_t Print::println(int num, int base)
+     fc6:	cf 92       	push	r12
+     fc8:	df 92       	push	r13
+     fca:	ef 92       	push	r14
+     fcc:	ff 92       	push	r15
+     fce:	0f 93       	push	r16
+     fd0:	1f 93       	push	r17
+     fd2:	6c 01       	movw	r12, r24
+     fd4:	7b 01       	movw	r14, r22
+     fd6:	9a 01       	movw	r18, r20
+  return print((unsigned long) b, base);
+}
+
+size_t Print::print(int n, int base)
+{
+  return print((long) n, base);
+     fd8:	00 27       	eor	r16, r16
+     fda:	f7 fc       	sbrc	r15, 7
+     fdc:	00 95       	com	r16
+     fde:	10 2f       	mov	r17, r16
+     fe0:	b8 01       	movw	r22, r16
+     fe2:	a7 01       	movw	r20, r14
+     fe4:	0e 94 a3 07 	call	0xf46	; 0xf46 <_ZN5Print5printEli>
+     fe8:	8c 01       	movw	r16, r24
+}
+
+size_t Print::println(int num, int base)
+{
+  size_t n = print(num, base);
+  n += println();
+     fea:	c6 01       	movw	r24, r12
+     fec:	0e 94 0b 07 	call	0xe16	; 0xe16 <_ZN5Print7printlnEv>
+     ff0:	08 0f       	add	r16, r24
+     ff2:	19 1f       	adc	r17, r25
+  return n;
+}
+     ff4:	c8 01       	movw	r24, r16
+     ff6:	1f 91       	pop	r17
+     ff8:	0f 91       	pop	r16
+     ffa:	ff 90       	pop	r15
+     ffc:	ef 90       	pop	r14
+     ffe:	df 90       	pop	r13
+    1000:	cf 90       	pop	r12
+    1002:	08 95       	ret
+
+00001004 <_ZN5Print5printEPKc>:
+  return n;
+}
+
+size_t Print::print(const char str[])
+{
+  return write(str);
+    1004:	0e 94 2b 07 	call	0xe56	; 0xe56 <_ZN5Print5writeEPKc>
+}
+    1008:	08 95       	ret
+
+0000100a <_ZN5Print7printlnEPKc>:
+  size_t n = print(s);
+  n += println();
+  return n;
+}
+
+size_t Print::println(const char c[])
+    100a:	ef 92       	push	r14
+    100c:	ff 92       	push	r15
+    100e:	0f 93       	push	r16
+    1010:	1f 93       	push	r17
+    1012:	7c 01       	movw	r14, r24
+  return n;
+}
+
+size_t Print::print(const char str[])
+{
+  return write(str);
+    1014:	0e 94 2b 07 	call	0xe56	; 0xe56 <_ZN5Print5writeEPKc>
+    1018:	8c 01       	movw	r16, r24
+}
+
+size_t Print::println(const char c[])
+{
+  size_t n = print(c);
+  n += println();
+    101a:	c7 01       	movw	r24, r14
+    101c:	0e 94 0b 07 	call	0xe16	; 0xe16 <_ZN5Print7printlnEv>
+    1020:	08 0f       	add	r16, r24
+    1022:	19 1f       	adc	r17, r25
+  return n;
+}
+    1024:	c8 01       	movw	r24, r16
+    1026:	1f 91       	pop	r17
+    1028:	0f 91       	pop	r16
+    102a:	ff 90       	pop	r15
+    102c:	ef 90       	pop	r14
+    102e:	08 95       	ret
+
+00001030 <main>:
+#include <Arduino.h>
+
+int main(void)
+    1030:	cf 93       	push	r28
+    1032:	df 93       	push	r29
+{
+	init();
+    1034:	0e 94 c8 08 	call	0x1190	; 0x1190 <init>
+
+#if defined(USBCON)
+	USB.attach();
+#endif
+	
+	setup();
+    1038:	0e 94 b7 04 	call	0x96e	; 0x96e <setup>
+    
+	for (;;) {
+		loop();
+		if (serialEventRun) serialEventRun();
+    103c:	c7 e0       	ldi	r28, 0x07	; 7
+    103e:	d5 e0       	ldi	r29, 0x05	; 5
+#endif
+	
+	setup();
+    
+	for (;;) {
+		loop();
+    1040:	0e 94 2b 04 	call	0x856	; 0x856 <loop>
+		if (serialEventRun) serialEventRun();
+    1044:	20 97       	sbiw	r28, 0x00	; 0
+    1046:	e1 f3       	breq	.-8      	; 0x1040 <main+0x10>
+    1048:	0e 94 07 05 	call	0xa0e	; 0xa0e <_Z14serialEventRunv>
+    104c:	f9 cf       	rjmp	.-14     	; 0x1040 <main+0x10>
+
+0000104e <__vector_16>:
+#if defined(__AVR_ATtiny24__) || defined(__AVR_ATtiny44__) || defined(__AVR_ATtiny84__)
+SIGNAL(TIM0_OVF_vect)
+#else
+SIGNAL(TIMER0_OVF_vect)
+#endif
+{
+    104e:	1f 92       	push	r1
+    1050:	0f 92       	push	r0
+    1052:	0f b6       	in	r0, 0x3f	; 63
+    1054:	0f 92       	push	r0
+    1056:	11 24       	eor	r1, r1
+    1058:	2f 93       	push	r18
+    105a:	3f 93       	push	r19
+    105c:	8f 93       	push	r24
+    105e:	9f 93       	push	r25
+    1060:	af 93       	push	r26
+    1062:	bf 93       	push	r27
+	// copy these to local variables so they can be stored in registers
+	// (volatile variables must be read from memory on every access)
+	unsigned long m = timer0_millis;
+    1064:	80 91 87 02 	lds	r24, 0x0287
+    1068:	90 91 88 02 	lds	r25, 0x0288
+    106c:	a0 91 89 02 	lds	r26, 0x0289
+    1070:	b0 91 8a 02 	lds	r27, 0x028A
+	unsigned char f = timer0_fract;
+    1074:	30 91 8b 02 	lds	r19, 0x028B
+
+	m += MILLIS_INC;
+    1078:	01 96       	adiw	r24, 0x01	; 1
+    107a:	a1 1d       	adc	r26, r1
+    107c:	b1 1d       	adc	r27, r1
+	f += FRACT_INC;
+    107e:	23 2f       	mov	r18, r19
+    1080:	2d 5f       	subi	r18, 0xFD	; 253
+	if (f >= FRACT_MAX) {
+    1082:	2d 37       	cpi	r18, 0x7D	; 125
+    1084:	20 f0       	brcs	.+8      	; 0x108e <__vector_16+0x40>
+		f -= FRACT_MAX;
+    1086:	2d 57       	subi	r18, 0x7D	; 125
+		m += 1;
+    1088:	01 96       	adiw	r24, 0x01	; 1
+    108a:	a1 1d       	adc	r26, r1
+    108c:	b1 1d       	adc	r27, r1
+	}
+
+	timer0_fract = f;
+    108e:	20 93 8b 02 	sts	0x028B, r18
+	timer0_millis = m;
+    1092:	80 93 87 02 	sts	0x0287, r24
+    1096:	90 93 88 02 	sts	0x0288, r25
+    109a:	a0 93 89 02 	sts	0x0289, r26
+    109e:	b0 93 8a 02 	sts	0x028A, r27
+	timer0_overflow_count++;
+    10a2:	80 91 83 02 	lds	r24, 0x0283
+    10a6:	90 91 84 02 	lds	r25, 0x0284
+    10aa:	a0 91 85 02 	lds	r26, 0x0285
+    10ae:	b0 91 86 02 	lds	r27, 0x0286
+    10b2:	01 96       	adiw	r24, 0x01	; 1
+    10b4:	a1 1d       	adc	r26, r1
+    10b6:	b1 1d       	adc	r27, r1
+    10b8:	80 93 83 02 	sts	0x0283, r24
+    10bc:	90 93 84 02 	sts	0x0284, r25
+    10c0:	a0 93 85 02 	sts	0x0285, r26
+    10c4:	b0 93 86 02 	sts	0x0286, r27
+}
+    10c8:	bf 91       	pop	r27
+    10ca:	af 91       	pop	r26
+    10cc:	9f 91       	pop	r25
+    10ce:	8f 91       	pop	r24
+    10d0:	3f 91       	pop	r19
+    10d2:	2f 91       	pop	r18
+    10d4:	0f 90       	pop	r0
+    10d6:	0f be       	out	0x3f, r0	; 63
+    10d8:	0f 90       	pop	r0
+    10da:	1f 90       	pop	r1
+    10dc:	18 95       	reti
+
+000010de <delay>:
+	
+	return ((m << 8) + t) * (64 / clockCyclesPerMicrosecond());
+}
+
+void delay(unsigned long ms)
+{
+    10de:	9b 01       	movw	r18, r22
+    10e0:	ac 01       	movw	r20, r24
+	return m;
+}
+
+unsigned long micros() {
+	unsigned long m;
+	uint8_t oldSREG = SREG, t;
+    10e2:	7f b7       	in	r23, 0x3f	; 63
+	
+	cli();
+    10e4:	f8 94       	cli
+	m = timer0_overflow_count;
+    10e6:	80 91 83 02 	lds	r24, 0x0283
+    10ea:	90 91 84 02 	lds	r25, 0x0284
+    10ee:	a0 91 85 02 	lds	r26, 0x0285
+    10f2:	b0 91 86 02 	lds	r27, 0x0286
+#if defined(TCNT0)
+	t = TCNT0;
+    10f6:	66 b5       	in	r22, 0x26	; 38
+	#error TIMER 0 not defined
+#endif
+
+  
+#ifdef TIFR0
+	if ((TIFR0 & _BV(TOV0)) && (t < 255))
+    10f8:	a8 9b       	sbis	0x15, 0	; 21
+    10fa:	05 c0       	rjmp	.+10     	; 0x1106 <delay+0x28>
+    10fc:	6f 3f       	cpi	r22, 0xFF	; 255
+    10fe:	19 f0       	breq	.+6      	; 0x1106 <delay+0x28>
+		m++;
+    1100:	01 96       	adiw	r24, 0x01	; 1
+    1102:	a1 1d       	adc	r26, r1
+    1104:	b1 1d       	adc	r27, r1
+#else
+	if ((TIFR & _BV(TOV0)) && (t < 255))
+		m++;
+#endif
+
+	SREG = oldSREG;
+    1106:	7f bf       	out	0x3f, r23	; 63
+	return ((m << 8) + t) * (64 / clockCyclesPerMicrosecond());
+}
+
+void delay(unsigned long ms)
+{
+	uint16_t start = (uint16_t)micros();
+    1108:	ba 2f       	mov	r27, r26
+    110a:	a9 2f       	mov	r26, r25
+    110c:	98 2f       	mov	r25, r24
+    110e:	88 27       	eor	r24, r24
+    1110:	86 0f       	add	r24, r22
+    1112:	91 1d       	adc	r25, r1
+    1114:	a1 1d       	adc	r26, r1
+    1116:	b1 1d       	adc	r27, r1
+    1118:	62 e0       	ldi	r22, 0x02	; 2
+    111a:	88 0f       	add	r24, r24
+    111c:	99 1f       	adc	r25, r25
+    111e:	aa 1f       	adc	r26, r26
+    1120:	bb 1f       	adc	r27, r27
+    1122:	6a 95       	dec	r22
+    1124:	d1 f7       	brne	.-12     	; 0x111a <delay+0x3c>
+    1126:	bc 01       	movw	r22, r24
+    1128:	2d c0       	rjmp	.+90     	; 0x1184 <delay+0xa6>
+	return m;
+}
+
+unsigned long micros() {
+	unsigned long m;
+	uint8_t oldSREG = SREG, t;
+    112a:	ff b7       	in	r31, 0x3f	; 63
+	
+	cli();
+    112c:	f8 94       	cli
+	m = timer0_overflow_count;
+    112e:	80 91 83 02 	lds	r24, 0x0283
+    1132:	90 91 84 02 	lds	r25, 0x0284
+    1136:	a0 91 85 02 	lds	r26, 0x0285
+    113a:	b0 91 86 02 	lds	r27, 0x0286
+#if defined(TCNT0)
+	t = TCNT0;
+    113e:	e6 b5       	in	r30, 0x26	; 38
+	#error TIMER 0 not defined
+#endif
+
+  
+#ifdef TIFR0
+	if ((TIFR0 & _BV(TOV0)) && (t < 255))
+    1140:	a8 9b       	sbis	0x15, 0	; 21
+    1142:	05 c0       	rjmp	.+10     	; 0x114e <delay+0x70>
+    1144:	ef 3f       	cpi	r30, 0xFF	; 255
+    1146:	19 f0       	breq	.+6      	; 0x114e <delay+0x70>
+		m++;
+    1148:	01 96       	adiw	r24, 0x01	; 1
+    114a:	a1 1d       	adc	r26, r1
+    114c:	b1 1d       	adc	r27, r1
+#else
+	if ((TIFR & _BV(TOV0)) && (t < 255))
+		m++;
+#endif
+
+	SREG = oldSREG;
+    114e:	ff bf       	out	0x3f, r31	; 63
+void delay(unsigned long ms)
+{
+	uint16_t start = (uint16_t)micros();
+
+	while (ms > 0) {
+		if (((uint16_t)micros() - start) >= 1000) {
+    1150:	ba 2f       	mov	r27, r26
+    1152:	a9 2f       	mov	r26, r25
+    1154:	98 2f       	mov	r25, r24
+    1156:	88 27       	eor	r24, r24
+    1158:	8e 0f       	add	r24, r30
+    115a:	91 1d       	adc	r25, r1
+    115c:	a1 1d       	adc	r26, r1
+    115e:	b1 1d       	adc	r27, r1
+    1160:	e2 e0       	ldi	r30, 0x02	; 2
+    1162:	88 0f       	add	r24, r24
+    1164:	99 1f       	adc	r25, r25
+    1166:	aa 1f       	adc	r26, r26
+    1168:	bb 1f       	adc	r27, r27
+    116a:	ea 95       	dec	r30
+    116c:	d1 f7       	brne	.-12     	; 0x1162 <delay+0x84>
+    116e:	86 1b       	sub	r24, r22
+    1170:	97 0b       	sbc	r25, r23
+    1172:	88 5e       	subi	r24, 0xE8	; 232
+    1174:	93 40       	sbci	r25, 0x03	; 3
+    1176:	c8 f2       	brcs	.-78     	; 0x112a <delay+0x4c>
+			ms--;
+    1178:	21 50       	subi	r18, 0x01	; 1
+    117a:	30 40       	sbci	r19, 0x00	; 0
+    117c:	40 40       	sbci	r20, 0x00	; 0
+    117e:	50 40       	sbci	r21, 0x00	; 0
+			start += 1000;
+    1180:	68 51       	subi	r22, 0x18	; 24
+    1182:	7c 4f       	sbci	r23, 0xFC	; 252
+
+void delay(unsigned long ms)
+{
+	uint16_t start = (uint16_t)micros();
+
+	while (ms > 0) {
+    1184:	21 15       	cp	r18, r1
+    1186:	31 05       	cpc	r19, r1
+    1188:	41 05       	cpc	r20, r1
+    118a:	51 05       	cpc	r21, r1
+    118c:	71 f6       	brne	.-100    	; 0x112a <delay+0x4c>
+		if (((uint16_t)micros() - start) >= 1000) {
+			ms--;
+			start += 1000;
+		}
+	}
+}
+    118e:	08 95       	ret
+
+00001190 <init>:
+
+void init()
+{
+	// this needs to be called before setup() or some functions won't
+	// work there
+	sei();
+    1190:	78 94       	sei
+	
+	// on the ATmega168, timer 0 is also used for fast hardware pwm
+	// (using phase-correct PWM would mean that timer 0 overflowed half as often
+	// resulting in different millis() behavior on the ATmega8 and ATmega168)
+#if defined(TCCR0A) && defined(WGM01)
+	sbi(TCCR0A, WGM01);
+    1192:	84 b5       	in	r24, 0x24	; 36
+    1194:	82 60       	ori	r24, 0x02	; 2
+    1196:	84 bd       	out	0x24, r24	; 36
+	sbi(TCCR0A, WGM00);
+    1198:	84 b5       	in	r24, 0x24	; 36
+    119a:	81 60       	ori	r24, 0x01	; 1
+    119c:	84 bd       	out	0x24, r24	; 36
+	// this combination is for the standard atmega8
+	sbi(TCCR0, CS01);
+	sbi(TCCR0, CS00);
+#elif defined(TCCR0B) && defined(CS01) && defined(CS00)
+	// this combination is for the standard 168/328/1280/2560
+	sbi(TCCR0B, CS01);
+    119e:	85 b5       	in	r24, 0x25	; 37
+    11a0:	82 60       	ori	r24, 0x02	; 2
+    11a2:	85 bd       	out	0x25, r24	; 37
+	sbi(TCCR0B, CS00);
+    11a4:	85 b5       	in	r24, 0x25	; 37
+    11a6:	81 60       	ori	r24, 0x01	; 1
+    11a8:	85 bd       	out	0x25, r24	; 37
+
+	// enable timer 0 overflow interrupt
+#if defined(TIMSK) && defined(TOIE0)
+	sbi(TIMSK, TOIE0);
+#elif defined(TIMSK0) && defined(TOIE0)
+	sbi(TIMSK0, TOIE0);
+    11aa:	ee e6       	ldi	r30, 0x6E	; 110
+    11ac:	f0 e0       	ldi	r31, 0x00	; 0
+    11ae:	80 81       	ld	r24, Z
+    11b0:	81 60       	ori	r24, 0x01	; 1
+    11b2:	80 83       	st	Z, r24
+	// this is better for motors as it ensures an even waveform
+	// note, however, that fast pwm mode can achieve a frequency of up
+	// 8 MHz (with a 16 MHz clock) at 50% duty cycle
+
+#if defined(TCCR1B) && defined(CS11) && defined(CS10)
+	TCCR1B = 0;
+    11b4:	e1 e8       	ldi	r30, 0x81	; 129
+    11b6:	f0 e0       	ldi	r31, 0x00	; 0
+    11b8:	10 82       	st	Z, r1
+
+	// set timer 1 prescale factor to 64
+	sbi(TCCR1B, CS11);
+    11ba:	80 81       	ld	r24, Z
+    11bc:	82 60       	ori	r24, 0x02	; 2
+    11be:	80 83       	st	Z, r24
+#if F_CPU >= 8000000L
+	sbi(TCCR1B, CS10);
+    11c0:	80 81       	ld	r24, Z
+    11c2:	81 60       	ori	r24, 0x01	; 1
+    11c4:	80 83       	st	Z, r24
+	sbi(TCCR1, CS10);
+#endif
+#endif
+	// put timer 1 in 8-bit phase correct pwm mode
+#if defined(TCCR1A) && defined(WGM10)
+	sbi(TCCR1A, WGM10);
+    11c6:	e0 e8       	ldi	r30, 0x80	; 128
+    11c8:	f0 e0       	ldi	r31, 0x00	; 0
+    11ca:	80 81       	ld	r24, Z
+    11cc:	81 60       	ori	r24, 0x01	; 1
+    11ce:	80 83       	st	Z, r24
+
+	// set timer 2 prescale factor to 64
+#if defined(TCCR2) && defined(CS22)
+	sbi(TCCR2, CS22);
+#elif defined(TCCR2B) && defined(CS22)
+	sbi(TCCR2B, CS22);
+    11d0:	e1 eb       	ldi	r30, 0xB1	; 177
+    11d2:	f0 e0       	ldi	r31, 0x00	; 0
+    11d4:	80 81       	ld	r24, Z
+    11d6:	84 60       	ori	r24, 0x04	; 4
+    11d8:	80 83       	st	Z, r24
+
+	// configure timer 2 for phase correct pwm (8-bit)
+#if defined(TCCR2) && defined(WGM20)
+	sbi(TCCR2, WGM20);
+#elif defined(TCCR2A) && defined(WGM20)
+	sbi(TCCR2A, WGM20);
+    11da:	e0 eb       	ldi	r30, 0xB0	; 176
+    11dc:	f0 e0       	ldi	r31, 0x00	; 0
+    11de:	80 81       	ld	r24, Z
+    11e0:	81 60       	ori	r24, 0x01	; 1
+    11e2:	80 83       	st	Z, r24
+#if defined(ADCSRA)
+	// set a2d prescale factor to 128
+	// 16 MHz / 128 = 125 KHz, inside the desired 50-200 KHz range.
+	// XXX: this will not work properly for other clock speeds, and
+	// this code should use F_CPU to determine the prescale factor.
+	sbi(ADCSRA, ADPS2);
+    11e4:	ea e7       	ldi	r30, 0x7A	; 122
+    11e6:	f0 e0       	ldi	r31, 0x00	; 0
+    11e8:	80 81       	ld	r24, Z
+    11ea:	84 60       	ori	r24, 0x04	; 4
+    11ec:	80 83       	st	Z, r24
+	sbi(ADCSRA, ADPS1);
+    11ee:	80 81       	ld	r24, Z
+    11f0:	82 60       	ori	r24, 0x02	; 2
+    11f2:	80 83       	st	Z, r24
+	sbi(ADCSRA, ADPS0);
+    11f4:	80 81       	ld	r24, Z
+    11f6:	81 60       	ori	r24, 0x01	; 1
+    11f8:	80 83       	st	Z, r24
+
+	// enable a2d conversions
+	sbi(ADCSRA, ADEN);
+    11fa:	80 81       	ld	r24, Z
+    11fc:	80 68       	ori	r24, 0x80	; 128
+    11fe:	80 83       	st	Z, r24
+	// here so they can be used as normal digital i/o; they will be
+	// reconnected in Serial.begin()
+#if defined(UCSRB)
+	UCSRB = 0;
+#elif defined(UCSR0B)
+	UCSR0B = 0;
+    1200:	10 92 c1 00 	sts	0x00C1, r1
+#endif
+}
+    1204:	08 95       	ret
+
+00001206 <pinMode>:
+#include "wiring_private.h"
+#include "pins_arduino.h"
+
+void pinMode(uint8_t pin, uint8_t mode)
+{
+	uint8_t bit = digitalPinToBitMask(pin);
+    1206:	48 2f       	mov	r20, r24
+    1208:	50 e0       	ldi	r21, 0x00	; 0
+    120a:	ca 01       	movw	r24, r20
+    120c:	86 56       	subi	r24, 0x66	; 102
+    120e:	9f 4f       	sbci	r25, 0xFF	; 255
+    1210:	fc 01       	movw	r30, r24
+    1212:	24 91       	lpm	r18, Z+
+	uint8_t port = digitalPinToPort(pin);
+    1214:	4a 57       	subi	r20, 0x7A	; 122
+    1216:	5f 4f       	sbci	r21, 0xFF	; 255
+    1218:	fa 01       	movw	r30, r20
+    121a:	84 91       	lpm	r24, Z+
+	volatile uint8_t *reg;
+
+	if (port == NOT_A_PIN) return;
+    121c:	88 23       	and	r24, r24
+    121e:	c1 f0       	breq	.+48     	; 0x1250 <pinMode+0x4a>
+
+	// JWS: can I let the optimizer do this?
+	reg = portModeRegister(port);
+    1220:	e8 2f       	mov	r30, r24
+    1222:	f0 e0       	ldi	r31, 0x00	; 0
+    1224:	ee 0f       	add	r30, r30
+    1226:	ff 1f       	adc	r31, r31
+    1228:	e8 59       	subi	r30, 0x98	; 152
+    122a:	ff 4f       	sbci	r31, 0xFF	; 255
+    122c:	a5 91       	lpm	r26, Z+
+    122e:	b4 91       	lpm	r27, Z+
+
+	if (mode == INPUT) { 
+    1230:	66 23       	and	r22, r22
+    1232:	41 f4       	brne	.+16     	; 0x1244 <pinMode+0x3e>
+		uint8_t oldSREG = SREG;
+    1234:	9f b7       	in	r25, 0x3f	; 63
+                cli();
+    1236:	f8 94       	cli
+		*reg &= ~bit;
+    1238:	8c 91       	ld	r24, X
+    123a:	20 95       	com	r18
+    123c:	82 23       	and	r24, r18
+    123e:	8c 93       	st	X, r24
+		SREG = oldSREG;
+    1240:	9f bf       	out	0x3f, r25	; 63
+    1242:	08 95       	ret
+	} else {
+		uint8_t oldSREG = SREG;
+    1244:	9f b7       	in	r25, 0x3f	; 63
+                cli();
+    1246:	f8 94       	cli
+		*reg |= bit;
+    1248:	8c 91       	ld	r24, X
+    124a:	82 2b       	or	r24, r18
+    124c:	8c 93       	st	X, r24
+		SREG = oldSREG;
+    124e:	9f bf       	out	0x3f, r25	; 63
+    1250:	08 95       	ret
+
+00001252 <digitalWrite>:
+	}
+}
+
+void digitalWrite(uint8_t pin, uint8_t val)
+{
+	uint8_t timer = digitalPinToTimer(pin);
+    1252:	48 2f       	mov	r20, r24
+    1254:	50 e0       	ldi	r21, 0x00	; 0
+    1256:	ca 01       	movw	r24, r20
+    1258:	82 55       	subi	r24, 0x52	; 82
+    125a:	9f 4f       	sbci	r25, 0xFF	; 255
+    125c:	fc 01       	movw	r30, r24
+    125e:	24 91       	lpm	r18, Z+
+	uint8_t bit = digitalPinToBitMask(pin);
+    1260:	ca 01       	movw	r24, r20
+    1262:	86 56       	subi	r24, 0x66	; 102
+    1264:	9f 4f       	sbci	r25, 0xFF	; 255
+    1266:	fc 01       	movw	r30, r24
+    1268:	94 91       	lpm	r25, Z+
+	uint8_t port = digitalPinToPort(pin);
+    126a:	4a 57       	subi	r20, 0x7A	; 122
+    126c:	5f 4f       	sbci	r21, 0xFF	; 255
+    126e:	fa 01       	movw	r30, r20
+    1270:	34 91       	lpm	r19, Z+
+	volatile uint8_t *out;
+
+	if (port == NOT_A_PIN) return;
+    1272:	33 23       	and	r19, r19
+    1274:	09 f4       	brne	.+2      	; 0x1278 <digitalWrite+0x26>
+    1276:	40 c0       	rjmp	.+128    	; 0x12f8 <digitalWrite+0xa6>
+
+	// If the pin that support PWM output, we need to turn it off
+	// before doing a digital write.
+	if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+    1278:	22 23       	and	r18, r18
+    127a:	51 f1       	breq	.+84     	; 0x12d0 <digitalWrite+0x7e>
+//
+//static inline void turnOffPWM(uint8_t timer) __attribute__ ((always_inline));
+//static inline void turnOffPWM(uint8_t timer)
+static void turnOffPWM(uint8_t timer)
+{
+	switch (timer)
+    127c:	23 30       	cpi	r18, 0x03	; 3
+    127e:	71 f0       	breq	.+28     	; 0x129c <digitalWrite+0x4a>
+    1280:	24 30       	cpi	r18, 0x04	; 4
+    1282:	28 f4       	brcc	.+10     	; 0x128e <digitalWrite+0x3c>
+    1284:	21 30       	cpi	r18, 0x01	; 1
+    1286:	a1 f0       	breq	.+40     	; 0x12b0 <digitalWrite+0x5e>
+    1288:	22 30       	cpi	r18, 0x02	; 2
+    128a:	11 f5       	brne	.+68     	; 0x12d0 <digitalWrite+0x7e>
+    128c:	14 c0       	rjmp	.+40     	; 0x12b6 <digitalWrite+0x64>
+    128e:	26 30       	cpi	r18, 0x06	; 6
+    1290:	b1 f0       	breq	.+44     	; 0x12be <digitalWrite+0x6c>
+    1292:	27 30       	cpi	r18, 0x07	; 7
+    1294:	c1 f0       	breq	.+48     	; 0x12c6 <digitalWrite+0x74>
+    1296:	24 30       	cpi	r18, 0x04	; 4
+    1298:	d9 f4       	brne	.+54     	; 0x12d0 <digitalWrite+0x7e>
+    129a:	04 c0       	rjmp	.+8      	; 0x12a4 <digitalWrite+0x52>
+	{
+		#if defined(TCCR1A) && defined(COM1A1)
+		case TIMER1A:   cbi(TCCR1A, COM1A1);    break;
+    129c:	80 91 80 00 	lds	r24, 0x0080
+    12a0:	8f 77       	andi	r24, 0x7F	; 127
+    12a2:	03 c0       	rjmp	.+6      	; 0x12aa <digitalWrite+0x58>
+		#endif
+		#if defined(TCCR1A) && defined(COM1B1)
+		case TIMER1B:   cbi(TCCR1A, COM1B1);    break;
+    12a4:	80 91 80 00 	lds	r24, 0x0080
+    12a8:	8f 7d       	andi	r24, 0xDF	; 223
+    12aa:	80 93 80 00 	sts	0x0080, r24
+    12ae:	10 c0       	rjmp	.+32     	; 0x12d0 <digitalWrite+0x7e>
+		#if defined(TCCR2) && defined(COM21)
+		case  TIMER2:   cbi(TCCR2, COM21);      break;
+		#endif
+		
+		#if defined(TCCR0A) && defined(COM0A1)
+		case  TIMER0A:  cbi(TCCR0A, COM0A1);    break;
+    12b0:	84 b5       	in	r24, 0x24	; 36
+    12b2:	8f 77       	andi	r24, 0x7F	; 127
+    12b4:	02 c0       	rjmp	.+4      	; 0x12ba <digitalWrite+0x68>
+		#endif
+		
+		#if defined(TIMER0B) && defined(COM0B1)
+		case  TIMER0B:  cbi(TCCR0A, COM0B1);    break;
+    12b6:	84 b5       	in	r24, 0x24	; 36
+    12b8:	8f 7d       	andi	r24, 0xDF	; 223
+    12ba:	84 bd       	out	0x24, r24	; 36
+    12bc:	09 c0       	rjmp	.+18     	; 0x12d0 <digitalWrite+0x7e>
+		#endif
+		#if defined(TCCR2A) && defined(COM2A1)
+		case  TIMER2A:  cbi(TCCR2A, COM2A1);    break;
+    12be:	80 91 b0 00 	lds	r24, 0x00B0
+    12c2:	8f 77       	andi	r24, 0x7F	; 127
+    12c4:	03 c0       	rjmp	.+6      	; 0x12cc <digitalWrite+0x7a>
+		#endif
+		#if defined(TCCR2A) && defined(COM2B1)
+		case  TIMER2B:  cbi(TCCR2A, COM2B1);    break;
+    12c6:	80 91 b0 00 	lds	r24, 0x00B0
+    12ca:	8f 7d       	andi	r24, 0xDF	; 223
+    12cc:	80 93 b0 00 	sts	0x00B0, r24
+
+	// If the pin that support PWM output, we need to turn it off
+	// before doing a digital write.
+	if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+
+	out = portOutputRegister(port);
+    12d0:	e3 2f       	mov	r30, r19
+    12d2:	f0 e0       	ldi	r31, 0x00	; 0
+    12d4:	ee 0f       	add	r30, r30
+    12d6:	ff 1f       	adc	r31, r31
+    12d8:	ee 58       	subi	r30, 0x8E	; 142
+    12da:	ff 4f       	sbci	r31, 0xFF	; 255
+    12dc:	a5 91       	lpm	r26, Z+
+    12de:	b4 91       	lpm	r27, Z+
+
+	uint8_t oldSREG = SREG;
+    12e0:	2f b7       	in	r18, 0x3f	; 63
+	cli();
+    12e2:	f8 94       	cli
+
+	if (val == LOW) {
+    12e4:	66 23       	and	r22, r22
+    12e6:	21 f4       	brne	.+8      	; 0x12f0 <digitalWrite+0x9e>
+		*out &= ~bit;
+    12e8:	8c 91       	ld	r24, X
+    12ea:	90 95       	com	r25
+    12ec:	89 23       	and	r24, r25
+    12ee:	02 c0       	rjmp	.+4      	; 0x12f4 <digitalWrite+0xa2>
+	} else {
+		*out |= bit;
+    12f0:	8c 91       	ld	r24, X
+    12f2:	89 2b       	or	r24, r25
+    12f4:	8c 93       	st	X, r24
+	}
+
+	SREG = oldSREG;
+    12f6:	2f bf       	out	0x3f, r18	; 63
+    12f8:	08 95       	ret
+
+000012fa <__mulsi3>:
+    12fa:	62 9f       	mul	r22, r18
+    12fc:	d0 01       	movw	r26, r0
+    12fe:	73 9f       	mul	r23, r19
+    1300:	f0 01       	movw	r30, r0
+    1302:	82 9f       	mul	r24, r18
+    1304:	e0 0d       	add	r30, r0
+    1306:	f1 1d       	adc	r31, r1
+    1308:	64 9f       	mul	r22, r20
+    130a:	e0 0d       	add	r30, r0
+    130c:	f1 1d       	adc	r31, r1
+    130e:	92 9f       	mul	r25, r18
+    1310:	f0 0d       	add	r31, r0
+    1312:	83 9f       	mul	r24, r19
+    1314:	f0 0d       	add	r31, r0
+    1316:	74 9f       	mul	r23, r20
+    1318:	f0 0d       	add	r31, r0
+    131a:	65 9f       	mul	r22, r21
+    131c:	f0 0d       	add	r31, r0
+    131e:	99 27       	eor	r25, r25
+    1320:	72 9f       	mul	r23, r18
+    1322:	b0 0d       	add	r27, r0
+    1324:	e1 1d       	adc	r30, r1
+    1326:	f9 1f       	adc	r31, r25
+    1328:	63 9f       	mul	r22, r19
+    132a:	b0 0d       	add	r27, r0
+    132c:	e1 1d       	adc	r30, r1
+    132e:	f9 1f       	adc	r31, r25
+    1330:	bd 01       	movw	r22, r26
+    1332:	cf 01       	movw	r24, r30
+    1334:	11 24       	eor	r1, r1
+    1336:	08 95       	ret
+
+00001338 <__divmodhi4>:
+    1338:	97 fb       	bst	r25, 7
+    133a:	09 2e       	mov	r0, r25
+    133c:	07 26       	eor	r0, r23
+    133e:	0a d0       	rcall	.+20     	; 0x1354 <__divmodhi4_neg1>
+    1340:	77 fd       	sbrc	r23, 7
+    1342:	04 d0       	rcall	.+8      	; 0x134c <__divmodhi4_neg2>
+    1344:	2e d0       	rcall	.+92     	; 0x13a2 <__udivmodhi4>
+    1346:	06 d0       	rcall	.+12     	; 0x1354 <__divmodhi4_neg1>
+    1348:	00 20       	and	r0, r0
+    134a:	1a f4       	brpl	.+6      	; 0x1352 <__divmodhi4_exit>
+
+0000134c <__divmodhi4_neg2>:
+    134c:	70 95       	com	r23
+    134e:	61 95       	neg	r22
+    1350:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00001352 <__divmodhi4_exit>:
+    1352:	08 95       	ret
+
+00001354 <__divmodhi4_neg1>:
+    1354:	f6 f7       	brtc	.-4      	; 0x1352 <__divmodhi4_exit>
+    1356:	90 95       	com	r25
+    1358:	81 95       	neg	r24
+    135a:	9f 4f       	sbci	r25, 0xFF	; 255
+    135c:	08 95       	ret
+
+0000135e <__udivmodsi4>:
+    135e:	a1 e2       	ldi	r26, 0x21	; 33
+    1360:	1a 2e       	mov	r1, r26
+    1362:	aa 1b       	sub	r26, r26
+    1364:	bb 1b       	sub	r27, r27
+    1366:	fd 01       	movw	r30, r26
+    1368:	0d c0       	rjmp	.+26     	; 0x1384 <__udivmodsi4_ep>
+
+0000136a <__udivmodsi4_loop>:
+    136a:	aa 1f       	adc	r26, r26
+    136c:	bb 1f       	adc	r27, r27
+    136e:	ee 1f       	adc	r30, r30
+    1370:	ff 1f       	adc	r31, r31
+    1372:	a2 17       	cp	r26, r18
+    1374:	b3 07       	cpc	r27, r19
+    1376:	e4 07       	cpc	r30, r20
+    1378:	f5 07       	cpc	r31, r21
+    137a:	20 f0       	brcs	.+8      	; 0x1384 <__udivmodsi4_ep>
+    137c:	a2 1b       	sub	r26, r18
+    137e:	b3 0b       	sbc	r27, r19
+    1380:	e4 0b       	sbc	r30, r20
+    1382:	f5 0b       	sbc	r31, r21
+
+00001384 <__udivmodsi4_ep>:
+    1384:	66 1f       	adc	r22, r22
+    1386:	77 1f       	adc	r23, r23
+    1388:	88 1f       	adc	r24, r24
+    138a:	99 1f       	adc	r25, r25
+    138c:	1a 94       	dec	r1
+    138e:	69 f7       	brne	.-38     	; 0x136a <__udivmodsi4_loop>
+    1390:	60 95       	com	r22
+    1392:	70 95       	com	r23
+    1394:	80 95       	com	r24
+    1396:	90 95       	com	r25
+    1398:	9b 01       	movw	r18, r22
+    139a:	ac 01       	movw	r20, r24
+    139c:	bd 01       	movw	r22, r26
+    139e:	cf 01       	movw	r24, r30
+    13a0:	08 95       	ret
+
+000013a2 <__udivmodhi4>:
+    13a2:	aa 1b       	sub	r26, r26
+    13a4:	bb 1b       	sub	r27, r27
+    13a6:	51 e1       	ldi	r21, 0x11	; 17
+    13a8:	07 c0       	rjmp	.+14     	; 0x13b8 <__udivmodhi4_ep>
+
+000013aa <__udivmodhi4_loop>:
+    13aa:	aa 1f       	adc	r26, r26
+    13ac:	bb 1f       	adc	r27, r27
+    13ae:	a6 17       	cp	r26, r22
+    13b0:	b7 07       	cpc	r27, r23
+    13b2:	10 f0       	brcs	.+4      	; 0x13b8 <__udivmodhi4_ep>
+    13b4:	a6 1b       	sub	r26, r22
+    13b6:	b7 0b       	sbc	r27, r23
+
+000013b8 <__udivmodhi4_ep>:
+    13b8:	88 1f       	adc	r24, r24
+    13ba:	99 1f       	adc	r25, r25
+    13bc:	5a 95       	dec	r21
+    13be:	a9 f7       	brne	.-22     	; 0x13aa <__udivmodhi4_loop>
+    13c0:	80 95       	com	r24
+    13c2:	90 95       	com	r25
+    13c4:	bc 01       	movw	r22, r24
+    13c6:	cd 01       	movw	r24, r26
+    13c8:	08 95       	ret
+
+000013ca <__tablejump2__>:
+    13ca:	ee 0f       	add	r30, r30
+    13cc:	ff 1f       	adc	r31, r31
+
+000013ce <__tablejump__>:
+    13ce:	05 90       	lpm	r0, Z+
+    13d0:	f4 91       	lpm	r31, Z+
+    13d2:	e0 2d       	mov	r30, r0
+    13d4:	09 94       	ijmp
+
+000013d6 <_exit>:
+    13d6:	f8 94       	cli
+
+000013d8 <__stop_program>:
+    13d8:	ff cf       	rjmp	.-2      	; 0x13d8 <__stop_program>
