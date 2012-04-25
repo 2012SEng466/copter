@@ -1,0 +1,19 @@
+This repository contains source code used to control a Quadcopter designed by Anderson Li and Garrett Owen.
+
+More details available at http://robots.dacloughb.com/project-3/
+
+Organization:
+
+Aero_PS2_Controller - Contains a python script used to take inputs from a Logitech Dual Action game pad controller and send commands to the Aero_Remote.
+
+Aero_Quad_X - Contains a modified version of AeroQuad version 3 available from http://www.aeroquad.com/
+
+Aero_Remote - Contains an Arduino program to read gamepad controller inputs over Serial from a computer and send them to the Aero_Quad_X wirelessly.  Also provides functions for remote PID adjustments.
+
+Arduino_Uno - Contains core libraries for the Arduino Uno.
+
+copter_control - Contains a small Arduino program to run four copter motors as directed wireless by copter_remote.
+
+copter_remote - Contains as small Arduino program to read Serial commands from a computer and send motor commands to a quadcopter running copter_control.
+
+
