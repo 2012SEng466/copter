@@ -23,6 +23,11 @@
 struct radio_data {
 	char motor; // motor 0,1,2,3, or a for all
 	int speed; // range 700-2000
+
+	// Set to 0 to request and acknowledgment
+	// Set to 1 to acknowledge
+	// Set to -1 otherwise
+	int ack;
 };
 
 typedef union radio_packet {
@@ -35,6 +40,5 @@ void radio_send_wait(radio_packet * packet, char * addr);
 void radio_send_nowait(radio_packet * packet, char * addr);
 int radio_recv(unsigned int timeout, radio_packet * packet);
 int radio_check_recv(radio_packet * packet);
-
 
 #endif /* RADIO_H_ */

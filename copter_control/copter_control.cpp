@@ -2,7 +2,7 @@
 #include "copter_control.h"
 
 int mSpeeds[4];
-int radio_flag = 0;
+volatile int radio_flag = 0;
 
 Servo motor0;
 Servo motor1;
@@ -48,6 +48,16 @@ void motor_set_all(int setSpeed) {
 	motor_write_speeds();
 }
 
+/**
+ * Requests the remote station to acknowledge that it is still there.
+ */
+void request_ack() {
+	radio_packet packet;
+
+	packet.vars.ack = 0;
+	radio_send_nowait(&packet, BASE_ADDR);
+}
+
 void setup() {
 	// DEBUG
 	Serial.begin(9600);
@@ -64,16 +74,48 @@ void setup() {
 void loop() {
 	radio_packet packet;
 
+//	unsigned long currTime = millis();
+//	static unsigned long ackRecvd = currTime;
+//	static unsigned long ackReq = currTime;
+//
+//	// Request Ack every second
+//	if (currTime - ackReq > 1000)
+//		request_ack();
+//
+//	// If no ack received within 2 seconds stop motors
+//	if (currTime - ackRecvd > 2000) {
+//		motor_stop_all();
+//		Serial.println("no ack recvd");
+//	}
+
 	// Check if data received
 	if (!radio_check_recv(&packet)) {
 		delay(100);
 		return;
 	}
 
+//	// Check if Ack received
+//	if (packet.vars.ack == 1) {
+//		ackRecvd = millis();
+//		return;
+//	}
+
 	switch (packet.vars.motor) {
 	case 'a':
 		motor_set_all(packet.vars.speed);
 		break;
+
+	case 'c': // clockwise
+		mSpeeds[0] = packet.vars.speed;
+		mSpeeds[2] = packet.vars.speed;
+		motor_write_speeds();
+		break;
+	case 'v': // counter clockwise
+		mSpeeds[1] = packet.vars.speed;
+		mSpeeds[3] = packet.vars.speed;
+		motor_write_speeds();
+		break;
+
 	case '0':
 		mSpeeds[0] = packet.vars.speed;
 		motor_write_speeds();

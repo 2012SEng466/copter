@@ -43,8 +43,8 @@
 									<listOptionValue builtIn="false" value="__IN_ECLIPSE__=1"/>
 									<listOptionValue builtIn="false" value="ARDUINO=${ARDUINO_IDE_VERSION}"/>
 								</option>
-								<option id="it.baeyens.avreclipse.compiler.option.optimize.packstruct.566164028" name="Pack structs (-fpack-struct)" superClass="it.baeyens.avreclipse.compiler.option.optimize.packstruct" value="false" valueType="boolean"/>
-								<option id="it.baeyens.avreclipse.compiler.option.optimize.shortenums.651991132" name="Short enums (-fshort-enums)" superClass="it.baeyens.avreclipse.compiler.option.optimize.shortenums" value="false" valueType="boolean"/>
+								<option id="it.baeyens.avreclipse.compiler.option.optimize.packstruct.566164028" name="Pack structs (-fpack-struct)" superClass="it.baeyens.avreclipse.compiler.option.optimize.packstruct" value="true" valueType="boolean"/>
+								<option id="it.baeyens.avreclipse.compiler.option.optimize.shortenums.651991132" name="Short enums (-fshort-enums)" superClass="it.baeyens.avreclipse.compiler.option.optimize.shortenums" value="true" valueType="boolean"/>
 								<option id="it.baeyens.avreclipse.compiler.option.language.uchar.1812587876" name="char is unsigned (-funsigned-char)" superClass="it.baeyens.avreclipse.compiler.option.language.uchar" value="false" valueType="boolean"/>
 								<option id="it.baeyens.avreclipse.compiler.option.language.ubitfields.10704290" name="bitfields are unsigned (-funsigned-bitfields)" superClass="it.baeyens.avreclipse.compiler.option.language.ubitfields" value="false" valueType="boolean"/>
 								<option id="it.baeyens.avreclipse.compiler.option.std.683877028" name="Language Standard" superClass="it.baeyens.avreclipse.compiler.option.std" value="it.baeyens.avreclipse.compiler.option.std.default" valueType="enumerated"/>
@@ -65,8 +65,8 @@
 									<listOptionValue builtIn="false" value="ARDUINO=${ARDUINO_IDE_VERSION}"/>
 								</option>
 								<option id="it.baeyens.avreclipse.cppcompiler.option.optimize.other.1963624562" name="Other Optimization Flags" superClass="it.baeyens.avreclipse.cppcompiler.option.optimize.other" value="-ffunction-sections -fdata-sections " valueType="string"/>
-								<option id="it.baeyens.avreclipse.cppcompiler.option.optimize.packstruct.144452329" name="Pack structs (-fpack-struct)" superClass="it.baeyens.avreclipse.cppcompiler.option.optimize.packstruct" value="false" valueType="boolean"/>
-								<option id="it.baeyens.avreclipse.cppcompiler.option.optimize.shortenums.342320419" name="Short enums (-fshort-enums)" superClass="it.baeyens.avreclipse.cppcompiler.option.optimize.shortenums" value="false" valueType="boolean"/>
+								<option id="it.baeyens.avreclipse.cppcompiler.option.optimize.packstruct.144452329" name="Pack structs (-fpack-struct)" superClass="it.baeyens.avreclipse.cppcompiler.option.optimize.packstruct" value="true" valueType="boolean"/>
+								<option id="it.baeyens.avreclipse.cppcompiler.option.optimize.shortenums.342320419" name="Short enums (-fshort-enums)" superClass="it.baeyens.avreclipse.cppcompiler.option.optimize.shortenums" value="true" valueType="boolean"/>
 								<option id="it.baeyens.avreclipse.cppcompiler.option.language.uchar.1159028291" name="char is unsigned (-funsigned-char)" superClass="it.baeyens.avreclipse.cppcompiler.option.language.uchar" value="false" valueType="boolean"/>
 								<option id="it.baeyens.avreclipse.cppcompiler.option.language.ubitfields.1912413953" name="bitfields are unsigned (-funsigned-bitfields)" superClass="it.baeyens.avreclipse.cppcompiler.option.language.ubitfields" value="false" valueType="boolean"/>
 								<option id="it.baeyens.avreclipse.cppcompiler.option.otherflags.840937360" name="Other flags" superClass="it.baeyens.avreclipse.cppcompiler.option.otherflags" value="-g" valueType="string"/>

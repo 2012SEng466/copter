@@ -14,6 +14,15 @@ void loop() {
 	radio_packet packet;
 	int input, number;
 
+//	radio_packet recvPacket;
+//
+//	// Check if data received
+//	if (radio_check_recv(&recvPacket) && packet.vars.ack == 0) {
+//		packet.vars.ack = 1;
+//		radio_send_nowait(&recvPacket, COPTER_ADDR);
+//		Serial.println("Sending ack...");
+//	}
+
 	// Wait for input
 	if (!Serial.available()) return;
 
@@ -29,7 +38,7 @@ void loop() {
 		return;
 	}
 
-	// Convert string or numbers to integer. String terminated with m (for microseconds).
+	// Convert string of numbers to integer. String terminated with m (for microseconds).
 	number = input - '0';
 	while ((input = Serial.read()) != 'm') {
 		// Only accept characters 0-9
@@ -49,7 +58,7 @@ void loop() {
 
 	// wait for motor specification
 	while ((input = Serial.read()) == -1);
-	if (input != 'a' && (input < '0' || input > '3') ) {
+	if ( input != 'a' && input != 'c' && input != 'v' && (input < '0' || input > '3') ) {
 		Serial.print("Invalid motor selection: ");
 		Serial.println(input);
 		return;
@@ -58,7 +67,14 @@ void loop() {
 	// Send command
 	packet.vars.speed = number;
 	packet.vars.motor = input;
+	packet.vars.ack = -1;
 	radio_send_wait(&packet, COPTER_ADDR);
+
+	// DEBUG print packet details
+	Serial.print("speed: ");
+	Serial.print(packet.vars.speed);
+	Serial.print(" motor: ");
+	Serial.println(packet.vars.motor);
 
 //	// Receive data before 1000ms
 //	if (!radio_recv(1000, &packet)) {

@@ -80,8 +80,7 @@ void radio_send_wait(radio_packet * packet, char * addr) {
 
 	while(Mirf.isSending()){
 	}
-	// DEBUG
-	Serial.println("Finished sending");
+
 	delay(10);
 }
 
