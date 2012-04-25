@@ -14,7 +14,7 @@ Arduino_Uno - Contains core libraries for the Arduino Uno.
 
 copter_control - Contains a small Arduino program to run four copter motors as directed wireless by copter_remote.
 
-copter_libs - Contains libraries for the wireless radio, and the Arduino SPI and Servo libraries.
+copter_libs - Contains libraries for the wireless radio, and the Arduino SPI and Servo libraries. Libraries in this folder are used only by copter_control and copter_remote. Aero_Quad_X and Aero_Remote libraries are found in Aero_Quad_X/libraries.
 
 copter_remote - Contains as small Arduino program to read Serial commands from a computer and send motor commands to a quadcopter running copter_control.
 
