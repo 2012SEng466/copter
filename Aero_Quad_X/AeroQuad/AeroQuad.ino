@@ -1163,7 +1163,7 @@ void setup() {
   setupFourthOrder();
 
   previousTime = micros();
-  digitalWrite(LED_Green, HIGH);
+//  digitalWrite(LED_Green, HIGH);
   safetyCheck = 0;
 }
 

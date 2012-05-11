@@ -36,5 +36,6 @@ SUBDIRS := \
 UVicRadio \
 SPI \
 Mirf \
+Aero_Remote_ino \
 . \
 

@@ -69,7 +69,7 @@ void readPilotCommands() {
     if (receiverCommand[ZAXIS] > MAXCHECK && motorArmed == OFF && safetyCheck == ON) {
       zeroIntegralError();
       commandAllMotors(MINCOMMAND);
-      digitalWrite(LED_Red,HIGH);
+//      digitalWrite(LED_Red,HIGH);
       motorArmed = ON;
 
 //      Serial.println("Motors Armed");

@@ -1,7 +1,7 @@
 Mirf/MirfHardwareSpiDriver.d Mirf/MirfHardwareSpiDriver.o:  \
- /Users/garrett/Documents/school/seng466/copter/Aero3/Libraries/Mirf/MirfHardwareSpiDriver.cpp \
-  /Users/garrett/Documents/school/seng466/copter/Aero3/Libraries/Mirf/MirfHardwareSpiDriver.h \
-  /Users/garrett/Documents/school/seng466/copter/Aero3/Libraries/Mirf/MirfSpiDriver.h \
+ /Users/garrett/Documents/school/seng466/copter/Aero_Quad_X/Libraries/Mirf/MirfHardwareSpiDriver.cpp \
+  /Users/garrett/Documents/school/seng466/copter/Aero_Quad_X/Libraries/Mirf/MirfHardwareSpiDriver.h \
+  /Users/garrett/Documents/school/seng466/copter/Aero_Quad_X/Libraries/Mirf/MirfSpiDriver.h \
   /Applications/Arduino.app/Contents/Resources/Java/libraries/SPI/SPI.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Arduino.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/binary.h \
@@ -14,9 +14,9 @@ Mirf/MirfHardwareSpiDriver.d Mirf/MirfHardwareSpiDriver.o:  \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/new.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h
 
-/Users/garrett/Documents/school/seng466/copter/Aero3/Libraries/Mirf/MirfHardwareSpiDriver.h:
+/Users/garrett/Documents/school/seng466/copter/Aero_Quad_X/Libraries/Mirf/MirfHardwareSpiDriver.h:
 
-/Users/garrett/Documents/school/seng466/copter/Aero3/Libraries/Mirf/MirfSpiDriver.h:
+/Users/garrett/Documents/school/seng466/copter/Aero_Quad_X/Libraries/Mirf/MirfSpiDriver.h:
 
 /Applications/Arduino.app/Contents/Resources/Java/libraries/SPI/SPI.h:
 

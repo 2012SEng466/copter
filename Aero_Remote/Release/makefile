@@ -11,6 +11,7 @@ RM := rm -rf
 -include UVicRadio/subdir.mk
 -include SPI/subdir.mk
 -include Mirf/subdir.mk
+-include Aero_Remote_ino/subdir.mk
 -include subdir.mk
 -include objects.mk
 

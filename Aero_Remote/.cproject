@@ -37,8 +37,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ARDUINOBOARDNAME}/arduino}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ARDUINOBOARDNAME}/${ARDUINOBOARDVARIANT}}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aero_Remote}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aero_Remote/Mirf}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aero_Remote/UVicRadio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aero_Remote/Mirf}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aero_Remote/SPI}&quot;"/>
 								</option>
 								<option id="it.baeyens.avreclipse.compiler.option.def.1485111403" name="Define Syms (-D)" superClass="it.baeyens.avreclipse.compiler.option.def" valueType="definedSymbols">
@@ -60,8 +60,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ARDUINOBOARDNAME}/arduino}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ARDUINOBOARDNAME}/${ARDUINOBOARDVARIANT}}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aero_Remote}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aero_Remote/Mirf}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aero_Remote/UVicRadio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aero_Remote/Mirf}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Aero_Remote/SPI}&quot;"/>
 								</option>
 								<option id="it.baeyens.avreclipse.cppcompiler.option.def.479432623" name="Define Syms (-D)" superClass="it.baeyens.avreclipse.cppcompiler.option.def" valueType="definedSymbols">
@@ -99,9 +99,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="SPI|UVicRadio|Mirf" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry excluding="?xamples/*" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Mirf"/>
+						<entry excluding="SPI|Mirf|UVicRadio" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry excluding="?xamples/*" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="UVicRadio"/>
+						<entry excluding="?xamples/*" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Mirf"/>
 						<entry excluding="?xamples/*" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="SPI"/>
 					</sourceEntries>
 				</configuration>

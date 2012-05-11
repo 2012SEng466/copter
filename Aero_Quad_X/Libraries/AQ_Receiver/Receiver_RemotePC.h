@@ -1,21 +1,5 @@
 /*
-  AeroQuad v3.0.1 - February 2012
-  www.AeroQuad.com
-  Copyright (c) 2012 Ted Carancho.  All rights reserved.
-  An Open Source Arduino based multicopter.
-
-  This program is free software: you can redistribute it and/or modify 
-  it under the terms of the GNU General Public License as published by 
-  the Free Software Foundation, either version 3 of the License, or 
-  (at your option) any later version. 
-
-  This program is distributed in the hope that it will be useful, 
-  but WITHOUT ANY WARRANTY; without even the implied warranty of 
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
-  GNU General Public License for more details. 
-
-  You should have received a copy of the GNU General Public License 
-  along with this program. If not, see <http://www.gnu.org/licenses/>. 
+  Author: Garrett Owen
  */
 
 #ifndef _AEROQUAD_RECEIVER_REMOTE_PC_H_
@@ -25,24 +9,18 @@
 #include "Receiver.h"
 #include "Radio.h"
 #include "../../AeroQuad/DataStorage.h"
-//
-//#define XAXIS 0
-//#define YAXIS 1
-//#define ZAXIS 2
-//#define THROTTLE 3
-//#define MODE 4
-//#define AUX 5
+
+// Array positions for rcValue[] and and recieverCommand[]
+// XAXIS 	0	Roll
+// YAXIS 	1	Pitch
+// ZAXIS 	2	Yaw
+// THROTTLE 3	Throttle
+// MODE 	4	Rate/Attitude mode selection
+// AUX 		5
 
 volatile uint16_t rcValue[6] = {1500,1500,1500,1000,1500,1500}; // interval [1000;2000]
+unsigned long lastRecv;
 
-void readRadioPID(unsigned char PIDid) {
-  struct PIDdata* pid = &PID[PIDid];
-  pid->P = readFloatSerial();
-  pid->I = readFloatSerial();
-  pid->D = readFloatSerial();
-  pid->lastPosition = 0;
-  pid->integratedError = 0;
-}
 
 void radioCheck() {
 	radio_packet packet;
@@ -87,6 +65,29 @@ void radioCheck() {
 				rcValue[i] = packet.vars.receiverCommand[i];
 			}
 		}
+
+		lastRecv = currentTime;
+	}
+
+//	Serial.print(currentTime);
+//	Serial.print(" - ");
+//	Serial.print(lastRecv);
+//	Serial.print(" = ");
+//	Serial.println(currentTime - lastRecv);
+
+	// If no commands have been received in 2 seconds, slowly land the copter
+	if (currentTime - lastRecv > 2000000) {
+//		Serial.println("Landing!");
+		rcValue[XAXIS] = 1500;
+		rcValue[YAXIS] = 1500;
+		rcValue[ZAXIS] = 1500;
+
+		if (rcValue[THROTTLE] > 1550)
+			rcValue[THROTTLE] -= 40;
+
+		// Turn off after 7 seconds
+		if (currentTime- lastRecv > 7000000)
+			rcValue[THROTTLE] = 1000;
 	}
 }
 
